@@ -144,8 +144,11 @@ localJSONObject.put("password", "busyreindeer78");
 ## Терминал 3
 
 Ето го [решението ми](https://vid.me/CFdu) за следващия терминал целта е да се вземе fullpath на много забутан файл в `~/` и да се `cat`-не. 
+
 ![](images/search.png)
+
 Като допълнително усложнение е че версията на `bash` беше много стара, нямаше auto-completion и общо взето терминала си правеше каквото си иска с цел да ни попречи да стигнем бързо до ключа. Една команда беше достатъчна да вземем ключа. 
+
 ![](images/find.png)
 
 > open_sesame
@@ -160,9 +163,13 @@ localJSONObject.put("password", "busyreindeer78");
 
 ## Терминал 5
 Следващия терминал се намира в импровизирана станция на метро/влак(все тая).
+
 ![](images/terminal_metro.png)
+
 Веднага успях да разпозная че това е [less](https://en.wikipedia.org/wiki/Less_(Unix)), и можем да изпълняваме команди като изпълним `!sh`, което ни отвежда до shell.
+
 ![](images/terminal_metro_shell.png) 
+
 `Train_Console` се оказа shell script стартиращ `ActivateTrain` и съдържащ паролата за сваляне спирачките на влака.
 
 > 24fb3e89ce2aa0ea422c3d511d40dd84
