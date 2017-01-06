@@ -275,4 +275,55 @@ Content-Length: 123
 	"data" : { "crashdump": "php://filter/convert.base64-encode/resource=../exception" }
 }
 
+## Dungeon
+
+След 40минутно лутане в [играта](files/dungeon.zip) успях да открия debug(може и да греша) команда `GDT`, която отключва някакъв странен мод с допълнителни команди.
+```
+Valid commands are:
+AA- Alter ADVS          DR- Display ROOMS
+AC- Alter CEVENT        DS- Display state
+AF- Alter FINDEX        DT- Display text
+AH- Alter HERE          DV- Display VILLS
+AN- Alter switches      DX- Display EXITS
+AO- Alter OBJCTS        DZ- Display PUZZLE
+AR- Alter ROOMS         D2- Display ROOM2
+AV- Alter VILLS         EX- Exit
+AX- Alter EXITS         HE- Type this message
+AZ- Alter PUZZLE        NC- No cyclops
+DA- Display ADVS        ND- No deaths
+DC- Display CEVENT      NR- No robber
+DF- Display FINDEX      NT- No troll
+DH- Display HACKS       PD- Program detail
+DL- Display lengths     RC- Restore cyclops
+DM- Display RTEXT       RD- Restore deaths
+DN- Display switches    RR- Restore robber
+DO- Display OBJCTS      RT- Restore troll
+DP- Display parser      TK- Take
+```
+Най-интересната команда от тези е `DT` която ни принтира quotes от играта. Като допълнение играта върви и на порт **1111** на **dungeon.nothpolewonderland.com**. 
+Това може да се скриптне бързо:
+```
+from sock import *
+
+f = Sock("dungeon.northpolewonderland.com:11111", timeout=10)
+f.read_until(">", timeout=3)
+f.send("GDT\n")
+f.read_until("GDT>")
+for i in range(0,2000):
+    f.send("DT\n")
+    f.read_until("Entry:")
+    f.send(str(i) + "\n")
+    x = f.read_one()
+    print i, x
+
+f.close()
+```
+Една от репликите от играта ми се стори интересна:
+```
+"send email to peppermint@northpolewonderland.com"
+```
+Изпращаме празен емейл до посочения адрес и след минута получаваме последната част от аудио файла.
+![](images/dungeon_email.png)
+
+## И с това приключваме 4 част
 
