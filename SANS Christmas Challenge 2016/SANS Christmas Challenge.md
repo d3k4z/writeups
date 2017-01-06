@@ -250,14 +250,37 @@ Debug лога разкрива поредния mp3 файл скрит на we
 
 ## Analytics Server
 
+Продължаваме напред с следващата [цел](https://analytics.northpolewonderland.com/). Влизаме в уеб страницата като използваме паролите от които взехме в Част 2 от играта(и по точно от сорс-кода на андройд приложението).
 
-https://analytics.northpolewonderland.com/ <- creds from 1 reindeer
-Administrators cookie
+![](images/analytics_guest.png)
+
+Изтегляме файла `discombobulatedaudio2.mp3` от бутона **MP3**, и продължаваме напред.
+
+Използваме [**dirb**](http://tools.kali.org/web-applications/dirb) за да bruteforce-нем файлове на уеб сървъра и откриваме че уеб сайта е деплойнат посредством git, нека се опитаме да извлечем съдържанието му. За челта използваме приложението [**dvcs-ripper**](https://github.com/kost/dvcs-ripper) 
+[![asciicast](https://asciinema.org/a/b21p5mic9d05ofg483pe07m69.png)](https://asciinema.org/a/b21p5mic9d05ofg483pe07m69)
+
+След като успешно клонираме git репозиторито, имаме достъп до сорс-кода на приложението. След ревя на кода разбираме, че ако сме администратори можем да достъпим `edit.php`, а алгоритъма за съставяне на валидна администраторска session cookie се намира в `crypto.php` (с бърз copy-paste си ненерираме такава cookie със следния [скрипт](files/crypto.php))
+```
 82532b2136348aaa1fa7dd2243dc0dc1e10948231f339e5edd5770daf9eef18a4384f6e7bca04d87e572ba65ce996549b549496163a50b63b71976884152
-script.php
+```
+Заменяме **guest cookie** с прясно генерираната ни **администраторска**. И вече можем да видим допълнителната функция `edit.php`.
 
-/edit.php?id=749b17a7-565f-43f5-a3a3-2b90cf6dc7f4&name=id,dd,3d&description=hello&query=SELECT id, CONCAT(TO_BASE64(mp3)) AS file_to_hex FROM audio
-cat audio7 | base64 -d > discombobulatedaudio7.mp3
+След 10мин тестове, разбрах как се решава задача. Идеята е да се **edit**-не **item** от базата данни като в параметъра **query** да му се зададе **custom sql query**, която по късно че бъде изпълнена с помоща на view.php.
+
+Администраторската паролата може да бъде видяна от заявката от заявката:
+```
+/edit.php?id=749b17a7-565f-43f5-a3a3-2b90cf6dc7f4&name=id,dd,3d&description=hello&query=SELECT * FROM users;
+```
+![](images/analytics_admin_pass.png)
+
+Както можем и да извлечем следващия mp3 файл с подобна заявка но енкодиран в base64 или hex.
+
+```
+/edit.php?id=749b17a7-565f-43f5-a3a3-2b90cf6dc7f4&name=id,dd,3d&description=hello&query=SELECT id, CONCAT(TO_BASE64(mp3)) AS file_to_hex FROM audio; 
+```
+![](images/analytics_admin_mp3.png)
+
+Копираме и генерираме аудио файла локално и сме готови и с тази част от играта.
 
 https://analytics.northpolewonderland.com/view.php?id=749b17a7-565f-43f5-a3a3-2b90cf6dc7f4
 
