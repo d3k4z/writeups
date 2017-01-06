@@ -42,13 +42,17 @@
 ## 3) What username and password are embedded in the APK file?
 ## 4) What is the name of the audible component (audio file) in the SantaGram APK file?
 
-3-ти въпрос е ясен, трябва да декомпилираме апликацията и да намерим някакво име и парола. За да направим това ще трябва да знаем че **.apk**, като [.jar файловете](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html), могат да се разархивират и да се извлича съдържанието им.
+3-ти въпрос е ясен, трябва да декомпилираме апликацията и да намерим някакво име и парола. За да направим това ще трябва да знаем че **.apk**, като [.jar файловете](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html), могат лесно да бъдат декомпилирани за да се извлича съдържанието им.
 
 След като разгледаме файловата структура с бърза оборка, се отправяме към интересния файл classes.dex , който по презумция трябва да съдържа Java класовете на апликацията - [какво е .dex format](https://source.android.com/devices/tech/dalvik/dex-format.html). Ще ни е необходима и помощ и от [ето този tool](https://github.com/pxb1988/dex2jar) за да декомпилираме този файл. Ето как:
 
 [![asciicast](https://asciinema.org/a/96390.png)](https://asciinema.org/a/96390)
 
-Файлът **classes_dex2jar.jar** може също да бъде разархивиран или импортиран в [jd-gui](https://github.com/java-decompiler/jd-gui). Аз избирам втория вариант заради по-бързото търсене.
+По-нататък ще покажа и 2ри начин за декомпилиране и повторно компилиране на андройд апликация, но за сега това е достатъчно.
+
+Файлът **classes_dex2jar.jar** може също да бъде разархивиран или импортиран в [jd-gui](https://github.com/java-decompiler/jd-gui). 
+
+Аз избирам втория вариант заради по-бързото търсене.
 В **com.northpolewonderland.santagram.b** класа намираме следния код, който се явява и отговора на 1вия ни въпрос.
 ```
 ...
@@ -301,7 +305,7 @@ DO- Display OBJCTS      RT- Restore troll
 DP- Display parser      TK- Take
 ```
 Най-интересната команда от тези е `DT` която ни принтира quotes от играта. Като допълнение играта върви и на порт **1111** на **dungeon.nothpolewonderland.com**. 
-Това може да се скриптне бързо:
+Това може да се скриптне бързо с помоща на [sock](https://github.com/hellman/sock) библиотеката(изключително бърза и полезна, особено за CTF игри):
 ```
 from sock import *
 
@@ -318,7 +322,7 @@ for i in range(0,2000):
 
 f.close()
 ```
-Една от репликите от играта ми се стори интересна:
+Една от извлечените реплики ми се стори интересна, а резултата си заслужаваше опита:
 ```
 "send email to peppermint@northpolewonderland.com"
 ```
