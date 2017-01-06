@@ -303,6 +303,7 @@ Debug лога разкрива поредния mp3 файл скрит на we
 
 
 ## Exeption Server
+### ще се довърши уикенда
 http://ex.northpolewonderland.com/exception.php
 POST /exception.php HTTP/1.1
 Host: ex.northpolewonderland.com
@@ -371,3 +372,4 @@ f.close()
 # **Part 5: Discombobulated Audio** 
 ## 9) Who is the villain behind the nefarious plot.
 ## 10) Why had the villain abducted Santa? 
+### ще се довърши уикенда
