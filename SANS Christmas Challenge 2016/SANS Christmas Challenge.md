@@ -331,3 +331,7 @@ f.close()
 
 ## И с това приключваме 4 част
 
+
+# **Part 5: Discombobulated Audio** 
+## 9) Who is the villain behind the nefarious plot.
+## 10) Why had the villain abducted Santa? 
