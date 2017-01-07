@@ -417,7 +417,7 @@ f.close()
 
 Резултата който получих от 10минутно бъркане по ефектира(tempo, pitch, )
 ```
-father christmas santa claus or as I('ve) know him Jeff
+father christmas santa claus or as I('ve) always known him Jeff
 ```
 
 Рекпликата от файла се оказва цитат от сериала ["Doctor Who" - "Christmas Carol (2010)"](http://www.imdb.com/title/tt1672218/quotes) :
