@@ -302,8 +302,43 @@ Debug лога разкрива поредния mp3 файл скрит на we
 ![](images/meteor_app.png)
 
 
-## Exeption Server
-### ще се довърши уикенда
+## Exception Server
+
+Преминаваме на [следващия сървър](http://ex.northpolewonderland.com/) от групата на задачата. Сканираме енд-поинта за някакви интерсни файлове или сървиси. Откриваме **exception.php**, него също можехме да го видим в трафика произлизащ от android приложението. 
+
+С молка помощ от детайлния debug отговор при HTTP заявките, успяваме да си нагласим JSON съобщението което бива прието от PHP скрипта. 
+
+
+```
+{
+	"operation": "ReadCrashDump",
+	"data" : 
+    { 
+        "crashdump": "<file>" 
+    }
+}
+```
+
+
+
+
+
+Разбираме че php скрипта има 2 функционалност:
+
+* **WriteCrashDump** : Да записва crashdump информация идваща от android приложението в *.php файл на сървъра (_Какво ли може да се обърка?_)
+
+![](images/exceotion_write.png)
+
+* **ReadCrashDump** : Да чете и презентира записани crashdump файлове
+
+
+Експлойта който изплозвах е [стар](https://cwe.mitre.org/data/definitions/98.html) и произлиза от грешното използванe на require и като допълнение автоматичното добавяне на '.php' окончанието.
+
+![](images/exception_source.png)
+
+Това ни позволява да използваме PHP filters за в `crashdump` ключа на съобщението и така успешно да изпълним **PHP Remote File Inclusion** в  `ReadCrashDump` функцията. Резултата ни позволява да вземем [source coda](files/exception.php) на **exception.php**, енкодиран в отново в **base64**.
+
+```
 http://ex.northpolewonderland.com/exception.php
 POST /exception.php HTTP/1.1
 Host: ex.northpolewonderland.com
@@ -313,8 +348,16 @@ Content-Length: 123
 
 {
 	"operation": "ReadCrashDump",
-	"data" : { "crashdump": "php://filter/convert.base64-encode/resource=../exception" }
+	"data" : 
+    {
+        "crashdump": "php://filter/convert.base64-encode/resource=../exception"
+    }
 }
+```
+В сорс кога намираме пътя към mp3 файл, нужен ни за да приключим и с тази част от задачите.
+
+![](images/exception_ex_source.png)
+
 
 ## Dungeon
 
