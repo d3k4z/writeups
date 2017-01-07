@@ -396,6 +396,15 @@ f.close()
 ![](images/dungeon_email.png)
 
 ## И с това приключваме 4 част
+Ето ги и mp3 файловете който успяхме да съберем досега:
+
+* [files/discombobulatedaudio1.mp3](files/discombobulatedaudio1.mp3)
+* [files/discombobulatedaudio2.mp3](files/discombobulatedaudio2.mp3)
+* [files/discombobulatedaudio3.mp3](files/discombobulatedaudio3.mp3)
+* [files/discombobulatedaudio4.mp3](files/discombobulatedaudio4.mp3)
+* [files/discombobulatedaudio5.mp3](files/discombobulatedaudio5.mp3)
+* [files/discombobulatedaudio6.mp3](files/discombobulatedaudio6.mp3)
+* [files/discombobulatedaudio7.mp3](files/discombobulatedaudio7.mp3)
 
 
 # **Part 5: Discombobulated Audio** 
