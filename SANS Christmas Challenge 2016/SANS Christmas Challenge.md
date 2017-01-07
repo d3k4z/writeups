@@ -410,4 +410,19 @@ f.close()
 # **Part 5: Discombobulated Audio** 
 ## 9) Who is the villain behind the nefarious plot.
 ## 10) Why had the villain abducted Santa? 
-### ще се довърши уикенда
+
+Вече сме събрали всички аудио файлове и трябва да ги съединим и да си поиграем с настройките за да извлечем репликите. За целта аз използвам [Audacity](http://www.audacityteam.org/) защото е лесна и лека програма за audio editing.
+
+![](images/audio_file.png)
+
+Резултата който получих от 10минутно бъркане по ефектира(tempo, pitch, )
+```
+father christmas or as I know him Jeff
+```
+
+Рекпликата от файла се оказва цитат от сериала ["Doctor Who" - "Christmas Carol (2010)"](http://www.imdb.com/title/tt1672218/quotes) :
+
+![](images/audio_quote.png)
+
+
+## Следователно Дядо Коледа е отвлечен от Doctror Who!
