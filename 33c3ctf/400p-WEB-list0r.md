@@ -50,7 +50,7 @@ Connection: close
 
 Файлът който представлява най-голям интерес е **functions.php** и по-специално функцията **get_contents($url)**:
 
-```
+```php
 function get_contents($url) {
         $disallowed_cidrs = [ "127.0.0.1/24", "169.254.0.0/16", "0.0.0.0/8" ];
 
