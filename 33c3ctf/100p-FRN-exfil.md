@@ -24,4 +24,4 @@ Solves: **140**
 [![asciicast](https://asciinema.org/a/98619.png)](https://asciinema.org/a/98619?speed=2)
 
 
-Ако се вгледаме внимателно ще забележим че инф
+> ДА СЕ ДОВЪРШИ
