@@ -372,7 +372,8 @@ DP- Display parser      TK- Take
 ```
 Най-интересната команда от тези е `DT` която ни принтира quotes от играта. Като допълнение играта върви и на порт **1111** на **dungeon.nothpolewonderland.com**. 
 Това може да се скриптне бързо с помоща на [sock](https://github.com/hellman/sock) библиотеката(изключително бърза и полезна, особено за CTF игри):
-```
+
+```python
 from sock import *
 
 f = Sock("dungeon.northpolewonderland.com:11111", timeout=10)
