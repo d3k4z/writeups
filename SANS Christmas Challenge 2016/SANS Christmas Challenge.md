@@ -3,6 +3,38 @@
 ![](images/banner.png)
 
 
+- [**SANS Christmas Challenge 2016**](#sans-christmas-challenge-2016)
+    - [Записки от последната [кибер игра на SANS Institute](https://www.holidayhackchallenge.com/2016/).](#записки-от-последната-кибер-игра-на-sans-institutehttpswwwholidayhackchallengecom2016)
+- [**Part 1: A Most Curious Business Card**](#part-1-a-most-curious-business-card)
+    - [1) What is the secret message in Santa's tweets?](#1-what-is-the-secret-message-in-santas-tweets)
+    - [2) What is inside the ZIP file distributed by Santa's team?](#2-what-is-inside-the-zip-file-distributed-by-santas-team)
+- [**Part 2: Awesome Package Konveyance**](#part-2-awesome-package-konveyance)
+    - [3) What username and password are embedded in the APK file?](#3-what-username-and-password-are-embedded-in-the-apk-file)
+    - [4) What is the name of the audible component (audio file) in the SantaGram APK file?](#4-what-is-the-name-of-the-audible-component-audio-file-in-the-santagram-apk-file)
+- [**Part 3: A Fresh-Baked Holiday Pi**](#part-3-a-fresh-baked-holiday-pi)
+    - [5) What is the password for the "cranpi" account on the Cranberry Pi system?](#5-what-is-the-password-for-the-cranpi-account-on-the-cranberry-pi-system)
+    - [6) How did you open each terminal door and where had the villain imprisoned Santa?](#6-how-did-you-open-each-terminal-door-and-where-had-the-villain-imprisoned-santa)
+        - [Терминал 1](#терминал-1)
+    - [Терминал 2](#терминал-2)
+    - [Терминал 3](#терминал-3)
+    - [Терминал 4](#терминал-4)
+    - [Терминал 5](#терминал-5)
+    - [Къде е Дядо Коледа?](#къде-е-дядо-коледа)
+- [**Part 4: My Gosh... It's Full of Holes**](#part-4-my-gosh-its-full-of-holes)
+    - [7) ONCE YOU GET APPROVAL OF GIVEN IN-SCOPE TARGET IP ADDRESSES FROM TOM HESSMAN AT THE NORTH POLE, ATTEMPT TO REMOTELY EXPLOIT EACH OF THE FOLLOWING TARGETS:](#7-once-you-get-approval-of-given-in-scope-target-ip-addresses-from-tom-hessman-at-the-north-pole-attempt-to-remotely-exploit-each-of-the-following-targets)
+    - [6)  What are the names of the audio files you discovered from each system above? There are a total of SEVEN audio files (one from the original APK in Question 4, plus one for each of the six items in the bullet list above.)](#6--what-are-the-names-of-the-audio-files-you-discovered-from-each-system-above-there-are-a-total-of-seven-audio-files-one-from-the-original-apk-in-question-4-plus-one-for-each-of-the-six-items-in-the-bullet-list-above)
+    - [Development server](#development-server)
+    - [Analytics Server](#analytics-server)
+    - [Ads Server](#ads-server)
+    - [Exception Server](#exception-server)
+    - [Dungeon](#dungeon)
+    - [И с това приключваме 4 част](#и-с-това-приключваме-4-част)
+- [**Part 5: Discombobulated Audio**](#part-5-discombobulated-audio)
+    - [9) Who is the villain behind the nefarious plot.](#9-who-is-the-villain-behind-the-nefarious-plot)
+    - [10) Why had the villain abducted Santa?](#10-why-had-the-villain-abducted-santa)
+    - [Следователно Дядо Коледа е отвлечен от **Doctror Who!**](#следователно-дядо-коледа-е-отвлечен-от-doctror-who)
+
+
 # **Part 1: A Most Curious Business Card** 
 ## 1) What is the secret message in Santa's tweets?
 ## 2) What is inside the ZIP file distributed by Santa's team?
