@@ -10,7 +10,8 @@
 Ще се опитам да реша всекa една от тези задачи посредством 'най-модерния'(защото сме модерни) terminal debugger - [radare2](https://github.com/radare/radare2) (RIP gdb). Ако всичко върви добре ще се опитам да разясня също така една от най-новите методи за решаване на такива задачи, а именно [Symbolic Execution](https://en.wikipedia.org/wiki/Symbolic_execution).
 
 
-> Не че SymbolicExecution е нещо задължително ново, но в началото на 2017 отбори като **TrailOfBits** и **Shellphish** произведоха open-source тулове за решаване на такива проблеми. Това са [angr](https://github.com/angr/angr) и [manticore](https://github.com/trailofbits/manticore)
+> Не че SymbolicExecution е нещо задължително ново, но в началото на 2017 отбори като **TrailOfBits** и **Shellphish** произведоха open-source тулове за решаване на такива проблеми. Това са [angr](https://github.com/angr/angr) и [manticore](https://github.com/trailofbits/manticore). Много хора смятат че symbolic execution е бъдещето не само в Reverse Engineering-a но също така и в Binary Exploitation. Много интерсни неща се случват на световната сцена, например гореспоментатите отбори участваха в Cyber Grand Challenge(CGC) където няколко AI решениея напълно автоматизирано търсиха различни видове уязвимости, след което пристъпваха към автоматичен exploitation и paching. Моите скромни hacking умения не са дорасли за да мога дори да си представя процеса, но знам че в основата се крие Symbolic Execution и Semantic Understanding.
+
 
 <!-- TOC -->
 
@@ -19,6 +20,8 @@
     - [crackme0x00](#crackme0x00)
     - [crackme0x01](#crackme0x01)
     - [crackme0x02](#crackme0x02)
+    - [crackme0x03](#crackme0x03)
+    - [crackme0x04](#crackme0x04)
 
 <!-- /TOC -->
 
@@ -294,7 +297,7 @@ p = angr.Project('crackmes/crackme0x02')
 # 2. Голяма част от процеса по анализиране и разбиране изисква да се провери и разбере какво 
 # точно прави част от кода(какво е семантичното му значение).
 #
-# SimuVEX е енжхина улеснявяш този процес - разбира какво точно прави определен VEX код в 
+# SimuVEX е енджина улеснявяш този процес - разбира какво точно прави определен VEX код в 
 # текущото състояние на изпълнение на програмата. 
 #  - p.factory - е контейнер за заредения обект/проект 
 #  - p.factory.path.group() - създава path_group; Това е `умен` списък с различни пътища 
@@ -325,3 +328,82 @@ print("Otgovor: %s" % s.posix.dumps(0))
 
 Честито, със 6 реда код без много мислене по binary аритметика успяхме да решим 3тата задача от списъка.
 
+
+## crackme0x03
+
+След като разгледаме main блока от следващата задача виждаме следната инструкция `0x0804850c      e85dffffff     call sym.test` - извиква се допълнителна функция която ще направи проверката за въведената парола.
+
+Ето и графичното преставяне на блока sym.test:
+
+```assembly
+ 
+                         .--------------------------------------------.
+                         | [0x804846e] ;[gb]                          |
+                         | (fcn) sym.test 42                          |
+                         |   sym.test (int arg_8h, int arg_ch);       |
+                         | ; arg int arg_8h @ ebp+0x8                 |
+                         | ; arg int arg_ch @ ebp+0xc                 |
+                         |    ; CALL XREF from 0x0804850c (sym.main)  |
+                         | push ebp                                   |
+                         | mov ebp, esp                               |
+                         | sub esp, 8                                 |
+                         |    ; [0x8:4]=-1                            |
+                         |    ; 8                                     |
+                         | mov eax, dword [arg_8h]                    |
+                         |    ; [0xc:4]=-1                            |
+                         |    ; 12                                    |
+                         | cmp eax, dword [arg_ch]                    | << тук имаме проверка
+                         | je 0x804848a ;[ga]                         | << je - jump if equal
+                         `--------------------------------------------'    
+                                 f t                                       
+           .---------------------' '---------------------.                 
+           |                                             |
+           |                                             |
+   .-----------------------------------------.     .-----------------------------------------.
+   |  0x804847c ;[ge]                        |     |  0x804848a ;[ga]                        |
+   |      ; [0x80485ec:4]=0x6479714c         |     |      ; [0x80485fe:4]=0x76766453         |
+   |      ; "Lqydolg#Sdvvzrug$"              |     |      ; "Sdvvzrug#RN$$$#=,"              |
+   | mov dword [esp], str.Lqydolg_Sdvvzrug_  |     | mov dword [esp], str.Sdvvzrug_RN______  |
+   | call sym.shift ;[gc]                    |     | call sym.shift ;[gc]                    |
+   | jmp 0x8048496 ;[gd]                     |     `-----------------------------------------'
+   `-----------------------------------------'         v
+       v                                               |
+       '---------------------.-------------------------'
+                             |
+                             |
+                         .--------------------------------------------.
+                         |  0x8048496 ;[gd]                           |
+                         |      ; JMP XREF from 0x08048488 (sym.test) |
+                         | leave                                      |
+                         | ret                                        |
+                         `--------------------------------------------'
+
+``` 
+
+Без да се впускаме в аритметиката на асембли кода, отново можем да си изведем заключения от редовете:
+
+```assembly
+cmp eax, dword [arg_ch]
+je 0x804848a ;[ga]        
+```
+
+Стринговете подсказващи кой е правилния path от предните задачи този път са обфускирани посредством `sym.shift` функцията, но както споменах от горните редове можем да предположим кой е усшешния пад от `cmp` инструкцията и последващия `je`:
+
+```
+вярна парола -> 0x804848a
+грехна парола -> 0x804847c
+```
+
+Задачата пак е доведене до състояние наподобяващо предходната задача, знаем къде трябва да стигнем и кои path-ове трябва да избягваме. [Ето скрипта](crackme0x03.py) който ще реши задачата отново посредством Symbolic Execution.
+
+```shell
+d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes$ python crackme0x03.py
+WARNING | 2017-05-05 01:06:00,026 | simuvex.plugins.symbolic_memory | Concretizing symbolic length. Much sad; think about implementing.
+Otgovor: +000338724
+d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes$ echo "+000338724" | crackmes/crackme0x03
+IOLI Crackme Level 0x03
+Password: Password OK!!! :)
+d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes$
+```
+
+## crackme0x04
