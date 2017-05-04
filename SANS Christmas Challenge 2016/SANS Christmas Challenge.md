@@ -4,7 +4,6 @@
 
 
 - [**SANS Christmas Challenge 2016**](#sans-christmas-challenge-2016)
-    - [Записки от последната [кибер игра на SANS Institute](https://www.holidayhackchallenge.com/2016/).](#записки-от-последната-кибер-игра-на-sans-institutehttpswwwholidayhackchallengecom2016)
 - [**Part 1: A Most Curious Business Card**](#part-1-a-most-curious-business-card)
     - [1) What is the secret message in Santa's tweets?](#1-what-is-the-secret-message-in-santas-tweets)
     - [2) What is inside the ZIP file distributed by Santa's team?](#2-what-is-inside-the-zip-file-distributed-by-santas-team)
