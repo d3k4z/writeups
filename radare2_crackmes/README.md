@@ -239,6 +239,7 @@ d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes/crackmes$ echo "5274" | ./cr
 IOLI Crackme Level 0x01
 Password: Password OK :)
 ```
+Забравих да спомена че `rax2` е тул от сега на radare2 представляващ терминален **minimalistic expression evaluator**.
 
 ## crackme0x02
 
