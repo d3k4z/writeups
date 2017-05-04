@@ -328,6 +328,14 @@ print("Otgovor: %s" % s.posix.dumps(0))
 
 Честито, със 6 реда код без много мислене по binary аритметика успяхме да решим 3тата задача от списъка.
 
+```shell
+d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes$ python crackme0x02.py
+WARNING | 2017-05-05 01:09:48,942 | simuvex.plugins.symbolic_memory | Concretizing symbolic length. Much sad; think about implementing.
+Otgovor: +000338724
+d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes$ echo "+000338724" | crackmes/crackme0x02
+IOLI Crackme Level 0x02
+Password: Password OK :)
+```
 
 ## crackme0x03
 
