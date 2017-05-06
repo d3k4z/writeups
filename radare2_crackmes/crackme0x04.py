@@ -4,7 +4,8 @@ import angr
 
 p = angr.Project('crackmes/crackme0x04')
 
-e = p.surveyors.Explorer(avoid=(0x80484f4, 0x80484fb,), find=(0x80484a8,))
+e = p.surveyors.Explorer(avoid=(0x080484fb,), find=(0x080484dc,))
 e.run()
 
-e._f.state.posix.dumps(0)
+print e._f.state.posix.dumps(1)
+print e._f.state.posix.dumps(0)

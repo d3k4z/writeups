@@ -22,6 +22,7 @@
     - [crackme0x02](#crackme0x02)
     - [crackme0x03](#crackme0x03)
     - [crackme0x04](#crackme0x04)
+    - [crackme0x05](#crackme0x05)
 
 <!-- /TOC -->
 
@@ -99,7 +100,7 @@ vaddr=0x08048562 paddr=0x00000562 ordinal=003 sz=16 len=15 section=.rodata type=
 
 Отваряме файла посредством `r2 -d ./crackme0x01`. След като заредите задачата в дебъгъра е добре да изпълните следната команда - `aa`, защо?
 
-**аа** - командата означава 'analyze all' aka техника за извличане на информация посредством анализиране на assembly код(който не знае какво е assembly code или е нов в reverse engineering-a горещо препоръчвам безплатната книга на украйнския гуру Денис Юричев - [beginner.re](https://beginner.re)). Това означава че анализирайки структурата е възможно да се идентифицират basic blocks, function trees, opcodes и т.н.
+**аа** - командата означава 'analyze all' aka техника за извличане на информация посредством анализиране на assembly код(който не знае какво е assembly code или е нов в reverse engineering-a горещо препоръчвам безплатната книга на украйнския гуру Денис Юричев - [beginner.re](https://beginner.re)). Това означава че анализирайки структурата е възможно да се идентифицират basic blocks, function trees, opcodes и т.н. Друга интересна конфигурация на r2 е `e asm.describe = true`
 
 След това ще изведем списък на наличните функций(basic blocks) посредством `afl`.
 
@@ -176,65 +177,65 @@ asm.bits 32
 
 ```
 
-                             .-------------------------------------------------.
-                             | [0x80483e4] ;[gd]                               |
-                             |   ;-- main:                                     |
-                             | (fcn) main 113                                  |
-                             |   main ();                                      |
-                             | ; var int local_4h @ ebp-0x4                    |
-                             | ; var int local_4h_2 @ esp+0x4                  |
-                             |    ; DATA XREF from 0x08048347 (entry0)         |
-                             | push ebp                                        |
-                             | mov ebp, esp                                    |
-                             | sub esp, 0x18                                   |
-                             | and esp, 0xfffffff0                             |
-                             | mov eax, 0                                      |
-                             | add eax, 0xf                                    |
-                             | add eax, 0xf                                    |
-                             | shr eax, 4                                      |
-                             | shl eax, 4                                      |
-                             | sub esp, eax                                    |
-                             |    ; [0x8048528:4]=0x494c4f49                   |
-                             |    ; "IOLI Crackme Level 0x01."                 |
-                             | mov dword [esp], str.IOLI_Crackme_Level_0x01_n  |
-                             | call sym.imp.printf ;[ga]                       |
-                             |    ; [0x8048541:4]=0x73736150                   |
-                             |    ; "Password: "                               |
-                             | mov dword [esp], str.Password:                  |
-                             | call sym.imp.printf ;[ga]                       |
-                             | lea eax, [local_4h]                             |
-                             | mov dword [local_4h_2], eax                     |
-                             |    ; [0x804854c:4]=0x49006425                   |
-                             | mov dword [esp], 0x804854c                      |
-                             | call sym.imp.scanf ;[gb]                        | << въвежда се стойност от stdin
-                             |    ; [0x149a:4]=-1                              | 
-                             | cmp dword [local_4h], 0x149a                    | << сравняват се стойностите на въведената стойност и 0x149a
-                             | je 0x8048442 ;[gc]                              | << проверка на сравнението 
-                             |                                                 |
-                             `-------------------------------------------------'
-                                     f t
-                .--------------------' '------------------------.
-                |                                               |
-                |     Грешна парола                             | Вярна парола
-        .-------------------------------------------.     .----------------------------------------.
-        |  0x8048434 ;[gf]                          |     |  0x8048442 ;[gc]                       |
-        |      ; [0x804854f:4]=0x61766e49           |     |      ; [0x8048562:4]=0x73736150        |
-        |      ; "Invalid Password!."      <<<<     |     |      ; "Password OK :)."        <<<<   |
-        | mov dword [esp], str.Invalid_Password__n  |     | mov dword [esp], str.Password_OK_:__n  |
-        | call sym.imp.printf ;[ga]                 |     | call sym.imp.printf ;[ga]              |
-        | jmp 0x804844e ;[ge]                       |     `----------------------------------------'
-        `-------------------------------------------'         v
-            v                                                 |
-            '------------------------.------------------------'
-                                     |
-                                     |
-                                 .----------------------------------------.
-                                 |  0x804844e ;[ge]                       |
-                                 |      ; JMP XREF from 0x08048440 (main) |
-                                 | mov eax, 0                             |
-                                 | leave                                  |
-                                 | ret                                    |
-                                 `----------------------------------------'
+                       .-------------------------------------------------.
+                       | [0x80483e4] ;[gd]                               |
+                       |   ;-- main:                                     |
+                       | (fcn) main 113                                  |
+                       |   main ();                                      |
+                       | ; var int local_4h @ ebp-0x4                    |
+                       | ; var int local_4h_2 @ esp+0x4                  |
+                       |    ; DATA XREF from 0x08048347 (entry0)         |
+                       | push ebp                                        |
+                       | mov ebp, esp                                    |
+                       | sub esp, 0x18                                   |
+                       | and esp, 0xfffffff0                             |
+                       | mov eax, 0                                      |
+                       | add eax, 0xf                                    |
+                       | add eax, 0xf                                    |
+                       | shr eax, 4                                      |
+                       | shl eax, 4                                      |
+                       | sub esp, eax                                    |
+                       |    ; [0x8048528:4]=0x494c4f49                   |
+                       |    ; "IOLI Crackme Level 0x01."                 |
+                       | mov dword [esp], str.IOLI_Crackme_Level_0x01_n  |
+                       | call sym.imp.printf ;[ga]                       |
+                       |    ; [0x8048541:4]=0x73736150                   |
+                       |    ; "Password: "                               |
+                       | mov dword [esp], str.Password:                  |
+                       | call sym.imp.printf ;[ga]                       |
+                       | lea eax, [local_4h]                             |
+                       | mov dword [local_4h_2], eax                     |
+                       |    ; [0x804854c:4]=0x49006425                   |
+                       | mov dword [esp], 0x804854c                      |
+                       | call sym.imp.scanf ;[gb]                        | << stdin
+                       |    ; [0x149a:4]=-1                              | 
+                       | cmp dword [local_4h], 0x149a                    | << cmp stdin, 0x149a
+                       | je 0x8048442 ;[gc]                              | << jump if equal
+                       |                                                 |
+                       `-------------------------------------------------'
+                               f t
+          .--------------------' '------------------------.
+          |                                               |
+          |     Грешна парола                             | Вярна парола
+  .-------------------------------------------.     .----------------------------------------.
+  |  0x8048434 ;[gf]                          |     |  0x8048442 ;[gc]                       |
+  |      ; [0x804854f:4]=0x61766e49           |     |      ; [0x8048562:4]=0x73736150        |
+  |      ; "Invalid Password!."      <<<<     |     |      ; "Password OK :)."        <<<<   |
+  | mov dword [esp], str.Invalid_Password__n  |     | mov dword [esp], str.Password_OK_:__n  |
+  | call sym.imp.printf ;[ga]                 |     | call sym.imp.printf ;[ga]              |
+  | jmp 0x804844e ;[ge]                       |     `----------------------------------------'
+  `-------------------------------------------'         v
+      v                                                 |
+      '------------------------.------------------------'
+                               |
+                               |
+                           .----------------------------------------.
+                           |  0x804844e ;[ge]                       |
+                           |      ; JMP XREF from 0x08048440 (main) |
+                           | mov eax, 0                             |
+                           | leave                                  |
+                           | ret                                    |
+                           `----------------------------------------'
 ```
 
 От този изглед директно се вижда къде се прави проверката дали въведения стринг от клиента отговаря на паролата - 0x149a (4 hex байта).
@@ -415,3 +416,165 @@ d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes$
 ```
 
 ## crackme0x04
+
+Преминаваме към следващата задача, тук нещата стават с една идея по сложни(не забравяйте ако използвате radare2 да анализирате кода с изпълнението на `aaaaaAA`):
+
+```
+[0xf7745ac0]> afl
+0x0804833c    1 23           sym._init
+0x08048364    1 6            sym.imp.__libc_start_main
+0x08048374    1 6            sym.imp.scanf
+0x08048384    1 6            sym.imp.strlen
+0x08048394    1 6            sym.imp.printf
+0x080483a4    1 6            sym.imp.sscanf
+0x080483b4    1 6            sym.imp.exit
+0x080483d0    1 33           entry0
+0x080483f4    3 33           fcn.080483f4
+0x08048420    6 47           sym.__do_global_dtors_aux
+0x08048450    4 50           sym.frame_dummy
+0x08048484    6 133          sym.check << представена ни е нова функция
+0x08048509    1 92           sym.main
+0x08048570    4 99           sym.__libc_csu_init
+0x080485e0    1 5            sym.__libc_csu_fini
+0x080485e5    1 4            sym.__i686.get_pc_thunk.bx
+0x080485f0    4 35           sym.__do_global_ctors_aux
+0x08048614    1 26           sym._fini
+[0xf7745ac0]> pdf @ main
+            ;-- main:
+/ (fcn) sym.main 92
+|   sym.main ();
+|           ; var int local_78h @ ebp-0x78
+|           ; var int local_4h @ esp+0x4
+|              ; DATA XREF from 0x080483e7 (entry0)
+|           0x08048509      55             push ebp
+|           0x0804850a      89e5           mov ebp, esp
+|           0x0804850c      81ec88000000   sub esp, 0x88
+|           0x08048512      83e4f0         and esp, 0xfffffff0
+|           0x08048515      b800000000     mov eax, 0
+|           0x0804851a      83c00f         add eax, 0xf
+|           0x0804851d      83c00f         add eax, 0xf
+|           0x08048520      c1e804         shr eax, 4
+|           0x08048523      c1e004         shl eax, 4
+|           0x08048526      29c4           sub esp, eax
+|           0x08048528      c704245e8604.  mov dword [esp], str.IOLI_Crackme_Level_0x04_n ; str "IOLI Crackme Level 0x04."
+|           0x0804852f      e860feffff     call sym.imp.printf        ; int printf(const char *format)
+|           0x08048534      c70424778604.  mov dword [esp], str.Password: ; [0x8048677:4]=0x73736150 ; str "Password: " 
+|           0x0804853b      e854feffff     call sym.imp.printf        ; int printf(const char *format)
+|           0x08048540      8d4588         lea eax, [local_78h]       ;  0xffffcc80 --> 0xf7ffd000 --> 0x23f3c --> 147260
+|           0x08048543      89442404       mov dword [local_4h], eax
+|           0x08048547      c70424828604.  mov dword [esp], 0x8048682  ; [0x8048682:4]=0x7325 ; const char * format
+|           0x0804854e      e821feffff     call sym.imp.scanf         ; int scanf(const char *format)
+|           0x08048553      8d4588         lea eax, [local_78h]
+|           0x08048556      890424         mov dword [esp], eax
+|           0x08048559      e826ffffff     call sym.check
+|           0x0804855e      b800000000     mov eax, 0
+|           0x08048563      c9             leave
+\           0x08048564      c3             ret
+[0xf7745ac0]> 
+```
+Така, интересното тук е че input-а от stdin(да приемем че e 'AAAAA') се предава като единствен аргумент на функцията `sym.check`. А ето я и графиката на paths във функцията. `r2` ни визуализира `loop`, който в общи линий извършва следното:
+1. Инициалзират се броячи
+2. Лимита на брояча е с дължината(`strlen`) на аргумента. 
+3. Проверка дали сбора на числата от  = 15 (0xf).
+4. Ако ДА - 0x80484dc, ако не - 0x8048498 (loop)
+
+```
+                             .--------------------------------------------.
+                             | [0x8048484] ;[ga]                          |
+                             |      ; q5B                                 |
+                             | (fcn) sym.check 133                        |
+                             |   sym.check (int arg_8h);                  |
+                             | ; var int local_dh @ ebp-0xd               |
+                             | ; var int local_ch @ ebp-0xc               |
+                             | ; var int local_8h @ ebp-0x8               |
+                             | ; var int local_4h @ ebp-0x4               |
+                             | ; arg int arg_8h @ ebp+0x8                 |
+                             | ; var int local_4h_2 @ esp+0x4             |
+                             | ; var int local_8h_2 @ esp+0x8             |
+                             |    ; CALL XREF from 0x08048559 (sym.main)  |
+                             | push ebp                                   |
+                             | ebp = esp                                  |
+                             |    ; '('                                   |
+                             | esp -= 0x28                                |
+                             | dword [local_8h] = 0                       | << брояч1
+                             | dword [local_ch] = 0                       | << браяч2?
+                             `--------------------------------------------'
+                                 v
+                                 | Вход на loop
+                                 |
+                                 .------------------------------------------------------------------------.
+                             .---------------------------------------------.                              |
+                             |  0x8048498 ;[gd]                            |                              |
+                             |      ; JMP XREF from 0x080484f9 (sym.check) |                              |
+                             |      ; [0x8:4]=0                            |                              |
+                             | eax = dword [arg_8h]                        |                              |
+                             |    ; const char * s                         |                              |
+                             | dword [esp] = eax                           |                              |
+                             | sym.imp.strlen () ;[gb]                     |                              |
+                             |    ; [0x13:4]=256                           |                              |
+                             | if (dword [local_ch] == eax                 |                              |
+                             | jae 0x80484fb  ;[gc]                        |                              |
+                             `---------------------------------------------'                              `----------.
+                                                  f t                                                                |
+                                 .----------------' '------------------.                                             |
+                                 |                                     |                                             |
+                                 |                                     |        Грешна парола                        |
+                         .---------------------------------.     .----------------------------------------------.    |
+                         |  0x80484a8 ;[gg]                |     |  0x80484fb ;[gc]                             |    |
+                         | eax = dword [local_ch]          |     |      ; const char * format                   |    |
+                         | eax += dword [arg_8h]           |     |      ; JMP XREF from 0x080484a6 (sym.check)  |    |
+                         | eax = byte [eax]                |     |      ; [0x8048649:4]=0x73736150              |    |
+                         | byte [local_dh] = al            |     |      ; "Password Incorrect!."                |    |
+                         | eax = [local_4h]                |     | dword [esp] = str.Password_Incorrect__n      |    |
+                         | dword [local_8h_2] = eax        |     | sym.imp.printf () ;[gh]                      |    |
+                         |    ; [0x8048638:4]=0x50006425   |     |                                              |    |
+                         |    ; "%d"                       |     |                                              |    |
+                         | dword [local_4h_2] = 0x8048638  |     `----------------------------------------------'    |
+                         | eax = [local_dh]                |                                                         |
+                         |    ;  ...                       |                                                         |
+                         | dword [esp] = eax               |                                                         |
+                         | sym.imp.sscanf () ;[ge]         | << идея си нямам защо тук се използва scanf()           |
+                         | edx = dword [local_4h]          |                                                         |
+                         | eax = [local_8h]                |                                                         |
+                         | dword [eax] += edx              |                                                         |
+                         |    ; [0xf:4]=0x3000200          |                                                         |
+                         | if (dword [local_8h] == 0xf     |  << проверка дали сбора на цифрите в input-a = 15(0xf)  |
+                         | notZero 0x80484f4) ;[gf]        |                                                         |
+                         `---------------------------------'                                                         |
+                                 f t                                                                                 |
+         .-----------------------' '-------------.                                                                   |
+         |                                       |                                                                   |
+         |    Вярна парола                       |  Обратно към началото на loop                                     |
+ .-----------------------------------.     .---------------------------------------------.                           |
+ |  0x80484dc ;[gj]                  |     |  0x80484f4 ;[gf]                            |                           |
+ |      ; const char * format        |     |      ; JMP XREF from 0x080484da (sym.check) |                           |
+ |      ; [0x804863b:4]=0x73736150   |     | eax = [local_ch]                            |                           |
+ |      ; "Password OK!."            |     | dword [eax]++                               |                           |
+ | dword [esp] = str.Password_OK__n  |     | goto 0x8048498 ;[gd]                        |                           |
+ | sym.imp.printf () ;[gh]           |     `---------------------------------------------'                           |
+ |    ; int status                   |         `---------------------------------------------------------------------'
+ | dword [esp] = 0                   |
+ | sym.imp.exit () ;[gi]             |
+ `-----------------------------------'
+```
+
+Следователно, валидни пароли са `69(6+9=15)`,`96`,`555`,'4155', и така нататък.
+
+```
+d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes/crackmes$ ./crackme0x04
+IOLI Crackme Level 0x04
+Password: 1455
+Password OK!
+```
+
+Ако изберем да подходим към решение посредством SymbolicExecution - отново можем да използваме метода разяснен при решаването на `crackme0x01`,`crackme0x02`,`crackme0x03`. Промяната е само в тъсения `0x80484dc` и отбягван '0x80484fb` адрес от паметта за да се стигне го верния `path` - [тук](crackme0x04.py).
+
+```
+(angr) d3k4@d3k4-XPS:~/Documents/writeups/radare2_crackmes$ python crackme0x04.py 
+IOLI Crackme Level 0x04
+Password: 
+96
+```
+
+## crackme0x05
+
