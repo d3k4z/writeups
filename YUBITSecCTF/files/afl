@@ -1,0 +1,886 @@
+0x004002b8    3 23           sym._init
+0x004002d0    1 16           sub.ifunc_417c60_2d0
+0x004002e0    1 16           sub.ifunc_41a960_2e0
+0x004002f0    1 16           sub.ifunc_41af70_2f0
+0x00400300    1 16           sub.ifunc_41a1b0_300
+0x00400310    1 16           sub.ifunc_41a530_310
+0x00400320    1 16           sub.ifunc_41b080_320
+0x00400330    1 16           sub.ifunc_41ada0_330
+0x00400340    1 16           sub.ifunc_415a40_340
+0x00400350    1 16           sub.ifunc_417d70_350
+0x00400360    1 16           sub.ifunc_478110_360
+0x00400370    2 16           sub.ifunc_415800_370
+0x00400380   21 373          sym.backtrace_and_maps
+0x004004f5    1 29           sym.detach_arena.part.1
+0x00400512    1 31           sym.oom
+0x00400540    1 12           sym.fini
+0x00400550   75 1086         sym.init_cacheinfo
+0x00400990    1 42           entry0
+0x004009bb    4 41           sym.deregister_tm_clones
+0x004009e4    4 61           sym.register_tm_clones
+0x00400a21    5 44           sym.__do_global_dtors_aux
+0x00400a4d    6 58           sym.frame_dummy
+0x00400a87   12 387          main
+0x00400c10   11 301  -> 229  sym.generic_start_main
+0x00400eb0   16 309          sym.get_common_indeces.constprop.1
+0x00400ff0   65 825          sym.__libc_start_main
+0x00401330   12 187  -> 185  sym.check_one_fd
+0x004013f0    1 50           sym.__libc_check_standard_fds
+0x00401430   15 574  -> 557  sym.__libc_setup_tls
+0x00401670    7 137          sym.__libc_csu_init
+0x00401700    5 51           sym.__libc_csu_fini
+0x00401740   11 331          sym.__assert_fail_base
+0x00401890    1 62           sym.__assert_fail
+0x004018d0   92 6110 -> 2345 sym.__dcgettext
+0x004018e0   20 273  -> 243  sym.plural_eval
+0x00401ab0   11 118  -> 101  sym.transcmp
+0x00401b30    7 101          sym.plural_lookup.isra.2
+0x00401ba0  169 2979 -> 2920 sym._nl_find_msg
+0x004030b0   38 617  -> 588  sym._nl_find_domain
+0x00403320  400 5946 -> 5873 sym._nl_load_domain
+0x00404a60    2 16           sym.alias_compare
+0x00404a70   55 1170 -> 1155 sym.read_alias_file
+0x00404f10   36 422  -> 405  sym._nl_expand_alias
+0x004050c0   69 1300 -> 1287 sym._nl_make_l10nflist
+0x004055e0   22 282  -> 273  sym._nl_normalize_codeset
+0x00405700   38 607  -> 568  sym._nl_explode_name
+0x00405960  214 58626 -> 3155 sym.__gettext_free_exp
+0x004059c0    3 53   -> 164  sym.new_exp
+0x00405a04   10 108  -> 111  loc.00405a04
+0x00405a90   58 2021 -> 993  sym.__gettextparse
+0x00406280   16 258  -> 251  sym.__gettext_extract_plural
+0x00406390    5 64           sym.__hash_string
+0x004063d0    1 7            sym._setjmp
+0x004063e0    6 323  -> 318  sym.gsignal
+0x00406530   39 654  -> 652  sym.abort
+0x004067c0   52 82560 -> 729  sym.msort_with_tmp.part.0
+0x00406e10   44 8    -> 828  sym.qsort
+0x00406e20   17 220  -> 193  sym.getenv
+0x00406f00   20 298  -> 288  sym.__run_exit_handlers
+0x00407030    1 24           sym.exit
+0x00407050   31 393  -> 384  sym.__new_exitfn
+0x004071e0    1 21           sym.__internal_atexit
+0x00407230    1 23           sym.__cxa_atexit
+0x00407280   82 1145 -> 1075 sym.__strtoull_internal
+0x00407290   82 1129 -> 1077 sym.strtoul
+0x004072b0   81 1097 -> 1059 sym.____strtoul_l_internal
+0x00407700   82 10   -> 1069 sym.__strtoull_l
+0x00407710   48 607  -> 567  sym.__correctly_grouped_prefixmb
+0x00407970    5 192          sym.__printf
+0x00407a30    5 177          sym.__asprintf
+0x00407af0   22 413  -> 406  sym.__isoc99_scanf
+0x00407cf0   14 354  -> 348  sym.__fxprintf
+0x00407e60   42 570  -> 542  sym._IO_fclose
+0x004080f0   21 24560 -> 272  sym._IO_fflush
+0x00408270    4 63           sym.__fopen_maybe_mmap
+0x004083a0    9 10   -> 241  sym._IO_fopen64
+0x004083b0   30 445  -> 417  sym.puts
+0x004085c0   13 235  -> 221  sym.adjust_wide_data
+0x004086b0   81 1576 -> 1505 sym._IO_wfile_underflow
+0x00408d30   97 2210 -> 2106 sym._IO_wfile_seekoff
+0x004095e0   16 341  -> 322  sym._IO_wfile_underflow_mmap
+0x00409740    3 40           sym._IO_wfile_underflow_maybe_mmap
+0x00409770   24 493  -> 473  sym._IO_wdo_write
+0x00409960   15 257          sym._IO_wfile_overflow
+0x00409ae2   11 60   -> 145  fcn.00409ae2
+0x00409bf0   18 388  -> 371  sym._IO_wfile_sync
+0x00409d80   25 390  -> 359  sym._IO_wfile_xsputn
+0x00409f10   13 383  -> 369  sym._IO_vasprintf
+0x0040a090   34 17786 -> 448  sym.__fcloseall
+0x0040a0a0   39 754  -> 736  sym.__libc_message
+0x0040a3a0    2 8    -> 30   sym.__libc_fatal
+0x0040a3c0    3 32           sym._IO_vtable_check
+0x0040a3e0   10 164  -> 141  sym.__fgets_unlocked
+0x0040a490    6 121  -> 102  sym._IO_file_seekoff_maybe_mmap
+0x0040a510    2 21           sym._IO_file_close
+0x0040a540    3 47           sym._IO_file_setbuf
+0x0040a570    3 111  -> 107  sym._IO_file_setbuf_mmap
+0x0040a5e0   19 386  -> 357  sym.new_do_write
+0x0040a770   44 702  -> 632  sym._IO_file_underflow
+0x0040aa90   81 1494 -> 1411 sym._IO_file_seekoff
+0x0040b070    3 83   -> 76   sym._IO_file_close_mmap
+0x0040b0d0   20 577  -> 544  sym.mmap_remap_check
+0x0040b320    1 8    -> 51   sym._IO_file_seek
+0x0040b330    5 90   -> 80   sym._IO_file_sync_mmap
+0x0040b390   15 439  -> 429  sym.decide_maybe_mmap
+0x0040b550    3 84   -> 82   sym._IO_file_underflow_maybe_mmap
+0x0040b5b0    3 95   -> 89   sym._IO_file_xsgetn_maybe_mmap
+0x0040b610    1 16   -> 62   sym._IO_file_stat
+0x0040b620   14 172  -> 163  sym._IO_file_write
+0x0040b6d0   14 263  -> 256  sym._IO_file_xsgetn_mmap
+0x0040b7e0   33 561  -> 526  sym._IO_file_xsgetn
+0x0040ba20   18 304  -> 275  sym._IO_file_seekoff_mmap
+0x0040bb50   10 129  -> 117  sym._IO_file_underflow_mmap
+0x0040bbe0    5 54   -> 52   sym._IO_file_read
+0x0040bc20   31 426  -> 405  sym._IO_new_file_xsputn
+0x0040bdd0    1 44           sym._IO_new_file_init_internal
+0x0040be00    1 44           sym._IO_new_file_init
+0x0040be30   15 263  -> 246  sym._IO_file_open
+0x0040bf40    9 179  -> 158  sym._IO_new_file_attach
+0x0040c000    3 38   -> 30   sym._IO_new_do_write
+0x0040c030   15 407  -> 392  sym._IO_new_file_close_it
+0x0040c1d0   58 1166 -> 1125 sym._IO_new_file_fopen
+0x0040c660    9 151  -> 140  sym._IO_file_finish
+0x0040c700   31 522  -> 483  sym._IO_file_overflow
+0x0040c910   13 241  -> 224  sym._IO_file_sync
+0x0040ca10   23 493  -> 484  sym.save_for_backup
+0x0040cc00   15 159          sym.flush_cleanup
+0x0040cca0   51 706  -> 677  sym._IO_un_link.part.2
+0x0040cf70    3 18   -> 12   sym._IO_un_link
+0x0040cf90   39 612  -> 596  sym._IO_link_in
+0x0040d200    3 37           sym._IO_least_marker
+0x0040d230    1 43           sym._IO_switch_to_main_get_area
+0x0040d260    1 43           sym._IO_switch_to_backup_area
+0x0040d290   11 151  -> 140  sym._IO_switch_to_get_mode
+0x0040d330    4 86   -> 77   sym._IO_free_backup_area
+0x0040d390    5 104  -> 101  sym.__overflow
+0x0040d400   18 314  -> 281  sym.__underflow
+0x0040d540   19 322  -> 296  sym.__uflow
+0x0040d690    4 93   -> 89   sym._IO_setb
+0x0040d6f0   13 183  -> 156  sym._IO_doallocbuf
+0x0040d7b0    1 6            sym._IO_default_underflow
+0x0040d7c0    5 87   -> 82   sym._IO_default_uflow
+0x0040d820   17 251  -> 237  sym._IO_default_xsputn
+0x0040d920    2 49           sym._IO_sgetn
+0x0040d990   12 165          sym._IO_default_xsgetn
+0x0040da40   16 292  -> 271  sym._IO_default_setbuf
+0x0040db70    2 53           sym._IO_default_seekpos
+0x0040dbe0    6 89   -> 85   sym._IO_default_doallocate
+0x0040dd10    4 5    -> 199  sym._IO_init_internal
+0x0040dd20    3 163          sym._IO_old_init
+0x0040ddd0    5 311  -> 307  sym._IO_no_init
+0x0040df10    1 3            sym._IO_default_sync
+0x0040df20   11 119  -> 109  sym._IO_default_finish
+0x0040dfa0    1 8            sym._IO_default_seekoff
+0x0040dfb0    8 111  -> 108  sym._IO_sputbackc
+0x0040e020    7 119  -> 104  sym._IO_sungetc
+0x0040e0a0    7 64   -> 50   sym._IO_adjust_column
+0x0040e0e0   57 843  -> 808  sym._IO_flush_all_lockp
+0x0040e620   48 729  -> 706  sym._IO_flush_all_linebuffered
+0x0040e900    6 94   -> 83   sym._IO_init_marker
+0x0040e960    3 20   -> 31   sym._IO_remove_marker
+0x0040e98a    1 11           loc.0040e98a
+0x0040e9a0    1 7            sym._IO_marker_difference
+0x0040e9b0    5 47   -> 45   sym._IO_marker_delta
+0x0040e9e0   10 150  -> 133  sym._IO_seekmark
+0x0040ea80    9 34   -> 106  sym._IO_unsave_markers
+0x0040ec10    1 8            sym._IO_default_seek
+0x0040ec20    1 6            sym._IO_default_stat
+0x0040ec30    1 8            sym._IO_default_read
+0x0040ec40    1 3            sym._IO_default_write
+0x0040ec50    1 6            sym._IO_default_showmanyc
+0x0040ec60    1 2            sym._IO_default_imbue
+0x0040ec70    1 8            sym._IO_iter_begin
+0x0040ec80    1 3            sym._IO_iter_end
+0x0040ec90    1 5            sym._IO_iter_next
+0x0040eca0    1 4            sym._IO_iter_file
+0x0040ecb0    8 96           sym._IO_list_lock
+0x0040ed10    7 76           sym._IO_list_unlock
+0x0040ed60    1 32           sym._IO_list_resetlock
+0x0040ed80    8 86   -> 76   sym._IO_str_underflow
+0x0040ede0    2 18           sym._IO_str_overflow
+0x0040ee1c   13 315  -> 282  fcn.0040ee1c
+0x0040ef60   14 449  -> 424  sym.enlarge_userbuf
+0x0040f130   42 642  -> 588  sym._IO_str_seekoff
+0x0040f3c0   23 22   -> 348  sym._IO_str_pbackfail
+0x0040f3e0    4 43           sym._IO_str_finish
+0x0040f410    7 150  -> 137  sym._IO_str_init_static_internal
+0x0040f4b0    1 18           sym._IO_str_init_static
+0x0040f4d0    1 29           sym._IO_str_init_readonly
+0x0040f4f0    1 18           sym._IO_str_count
+0x0040f510    5 87           sym.malloc_init_state
+0x0040f570    6 146  -> 138  sym.mem2mem_check
+0x0040f610   42 548  -> 532  sym.mem2chunk_check
+0x0040f840    4 100          sym.__malloc_assert
+0x0040f8b0   21 412  -> 384  sym.new_heap
+0x0040fa50   15 320  -> 313  sym.mremap_chunk
+0x0040fb90   10 165  -> 161  sym.systrim.isra.0
+0x0040fc40   27 352  -> 347  sym.get_free_list
+0x0040fda0   15 243  -> 236  sym.malloc_printerr
+0x0040fea0   14 322  -> 312  sym.top_check
+0x0040fff0   47 878  -> 850  sym.malloc_consolidate
+0x00410360   15 278          sym.int_mallinfo
+0x00410480   20 144  -> 375  sym.munmap_chunk
+0x00410510  192 3062 -> 2961 sym._int_free
+0x00411110   99 2224 -> 2147 sym.sysmalloc
+0x004119c0  162 2927 -> 2869 sym._int_malloc
+0x00412530   15 496  -> 475  sym._int_memalign
+0x00412720   15 193  -> 188  sym.malloc_check
+0x004127f0   44 360  -> 529  sym.memalign_check
+0x00412960   27 319  -> 318  sym.free_check
+0x00412aa0   91 1769 -> 1672 sym._int_realloc
+0x00413190   98 1344 -> 1332 sym.arena_get2.part.3
+0x004136d0   22 236  -> 223  sym.arena_get_retry
+0x004137c0   14 164          sym.__malloc_fork_lock_parent
+0x00413870   14 130          sym.__malloc_fork_unlock_parent
+0x00413900   11 158          sym.__malloc_fork_unlock_child
+0x004139a0    2 65           sym.__malloc_check_init
+0x00413a00   73 966  -> 918  sym.malloc
+0x00413b80   74 582  -> 918  sym._mid_memalign
+0x00413dd0  205 146  -> 3082 sym.__cfree
+0x00413e70   40 701  -> 665  sym.__libc_realloc
+0x00414130    1 9            sym.__libc_memalign
+0x00414140   73 1133 -> 1063 sym.__calloc
+0x004145b0   16 474  -> 200  sym.__libc_mallopt
+0x00414790   18 209  -> 197  sym.ptmalloc_init.part.5
+0x00414ae0   76 60   -> 972  sym.malloc_hook_ini
+0x00414b20  116 76   -> 1656 sym.realloc_hook_ini
+0x00414b70    3 85   -> 76   sym.memalign_hook_ini
+0x00414bd0    3 65   -> 55   sym.__libc_valloc
+0x00414c20    5 121  -> 109  sym.pvalloc
+0x00414ca0   44 679  -> 676  sym.__malloc_trim
+0x00414f50   17 311  -> 304  sym.__mallinfo
+0x00415090   18 527  -> 512  sym.malloc_stats
+0x004152a0   43 1211 -> 1207 sym.__malloc_info.part.7
+0x00415760    7 83   -> 79   sym.__posix_memalign
+0x004157c0    3 24   -> 18   sym.__malloc_info
+0x004157e0    1 27           sym.__default_morecore
+0x00415820    3 87           sym.__strchr_sse2
+0x004158e0    3 181          loc.004158e0
+0x00415a70   17 5151 -> 337  sym.__strcmp_sse2
+0x00416eb0   19 3474 -> 319  sym.__strcmp_sse42
+0x00417c90   18 220  -> 217  sym.__GI_strcpy
+0x00417d90   14 151          sym.__strcspn_sse2
+0x00417e30    2 51   -> 91   sym.__strdup
+0x00417e80   13 412  -> 380  sym.strlen
+0x00418020   27 6217 -> 438  sym.strncmp
+0x00419870   21 302  -> 285  sym.critical_factorization
+0x004199a0   52 928  -> 897  sym.two_way_long_needle
+0x00419d40   62 1121 -> 1061 sym.__strstr_sse2
+0x0041a1b0    1 22           sym.__libc_strstr_ifunc
+0x0041a1d0   53 852  -> 772  sym.memchr
+0x0041a560   68 1022 -> 1016 sym.__memcmp_sse2
+0x0041aa30    1 8    -> 45   sym.mempcpy
+0x0041aa40    3 40           sym.memcpy
+0x0041aa43    3 37           loc.0041aa43
+0x0041aa70    6 40           sym.__memmove_erms
+0x0041aaa0   37 761          sym.__memmove_sse2_unaligned_erms
+0x0041ae30    1 12   -> 39   sym.__bzero
+0x0041ae40    1 20           sym.__memset_sse2_unaligned
+0x0041ae54    3 27           loc.0041ae54
+0x0041ae70    1 16           sym.__memset_erms
+0x0041ae80   19 227          sym.__memset_sse2_unaligned_erms
+0x0041afa0   18 220  -> 217  sym.__GI_stpcpy
+0x0041b110   25 95477 -> 765  sym.__strcasecmp_sse2
+0x0041b120   25 95461 -> 749  sym.__GI___strcasecmp_l
+0x0041d350   27 86709 -> 731  sym.__strcasecmp_sse42
+0x0041d360   27 86693 -> 715  sym.__strcasecmp_l_sse42
+0x0041ef00   27 79621 -> 614  sym.__strcasecmp_avx
+0x0041ef10   27 79605 -> 598  sym.__strcasecmp_l_avx
+0x00420570   25 505  -> 453  sym.__rawmemchr
+0x00420780   10 522  -> 510  sym.__strchrnul
+0x00420990   17 4671 -> 337  sym.__strcmp_ssse3
+0x00421bf0   16 675  -> 649  sym.__strcmp_sse2_unaligned
+0x00421ea0   16 309  -> 292  sym.__memcmp_sse4_1
+0x00422a55    3 37           loc.00422a55
+0x004234e0    2 16           sym.__memmove_chk_ssse3
+0x004234f0   42 1319 -> 1263 sym.__memmove_ssse3
+0x00426060    5 60           sym.__memmove_chk_ssse3_back
+0x00428b80   37 1848         sym.__memmove_avx512_no_vzeroupper
+0x004292c0   25 37701 -> 765  sym.__strcasecmp_ssse3
+0x004292d0   25 37685 -> 749  sym.__strcasecmp_l_ssse3
+0x0042b410  215 6050 -> 5930 sym.__strcpy_ssse3
+0x0042cbc0  215 6147 -> 5945 sym.__stpcpy_ssse3
+0x0042e3d0   27 854  -> 806  sym.__strcpy_sse2_unaligned
+0x0042ea00   27 838  -> 790  sym.__stpcpy_sse2_unaligned
+0x0042f0b0   72 789  -> 596  sym.__strchr_sse2_no_bsf
+0x0042f3d0  320 5979 -> 5624 sym.__memcmp_ssse3
+0x00430b40   52 1171 -> 1063 sym.__strstr_sse2_unaligned
+0x00430fe0   20 311  -> 284  sym.__strcspn_sse42
+0x00431120   29 624          sym.__memset_avx512_no_vzeroupper
+0x00431390    3 43           sym.__memmove_avx_unaligned
+0x004313c0   39 980          sym.__memmove_avx_unaligned_erms
+0x004317a0    3 58           sym.__memmove_avx512_unaligned
+0x004317e0   41 1272         sym.__memmove_avx512_unaligned_erms
+0x00431ce0    3 42           sym.__memset_avx2_unaligned
+0x00431d30   22 267  -> 286  sym.__memset_avx2_unaligned_erms
+0x00431e40    3 55           sym.__memset_avx512_unaligned
+0x00431e80    1 19           sym.__memset_avx512_erms
+0x00431ea0   23 337          sym.__memset_avx512_unaligned_erms
+0x00432000   57 713  -> 701  sym.intel_check_word
+0x004322d0   16 300  -> 287  sym.handle_intel
+0x00432400    8 409  -> 107  sym.handle_amd
+0x004325a0    3 19           sym.__cache_sysconf
+0x00432610    1 9            sym.wmempcpy
+0x00432620    3 66   -> 62   sym._nl_cleanup_ctype
+0x00432670    8 121  -> 110  sym.__wcsmbs_getfct
+0x004326f0   30 502  -> 482  sym.__wcsmbs_load_conv
+0x004328f0    9 126  -> 123  sym.__wcsmbs_clone_conv
+0x00432970    4 99   -> 95   sym.__wcsmbs_named_conv
+0x004329e0    6 88   -> 71   sym._Exit
+0x00432a40    6 253  -> 249  sym.__sysconf_check_spec
+0x00432b40   33 1846 -> 500  sym.sysconf
+0x00433280    2 20           sym.__sched_yield
+0x004332a0    3 73           sym.__get_child_max
+0x004332f0    4 50   -> 49   sym._xstat
+0x00433340    4 50   -> 46   sym.__fxstat64
+0x00433390    5 81           sym.__open
+0x004333f0    5 81           sym.__read
+0x00433450    5 81           sym.__write
+0x004334b0    3 52   -> 43   sym.__lseek64
+0x004334f0    8 144  -> 133  sym.do_fcntl
+0x00433580    3 83           sym.__fcntl_nocancel
+0x004335e0    7 149          sym.__libc_fcntl
+0x00433680  100 1863 -> 1797 sym.__getcwd
+0x00433dd0    8 132  -> 121  sym.getrlimit
+0x00433e60   14 158  -> 140  sym.sbrk
+0x00433f00    3 43           sym.getpagesize
+0x00433f30    3 71           sym.__getdtablesize
+0x00433f80   11 182  -> 179  sym.__mmap
+0x00434040    2 20           sym.munmap
+0x00434060    2 20           sym.__mprotect
+0x00434080    2 20           sym.madvise
+0x004340a0    9 126  -> 119  sym.trecurse
+0x00434120  210 63   -> 3145 sym.tdestroy_recurse
+0x00434160   22 367  -> 339  sym.maybe_split_for_insert.isra.0
+0x004342d0   17 352  -> 336  sym.tsearch
+0x00434430    8 83   -> 73   sym.tfind
+0x00434490   68 1344 -> 1303 sym.tdelete
+0x004349d0    4 26   -> 19   sym.__twalk
+0x004349f0    3 18   -> 12   sym.__tdestroy
+0x00434a10   25 538  -> 515  sym.next_line
+0x00434c30    9 83           sym.sysinfo_mempages
+0x00434c90   38 796  -> 772  sym.__get_nprocs
+0x00434fb0   14 203          sym.__get_nprocs_conf
+0x00435080    3 73           sym.get_phys_pages
+0x004350d0    3 73           sym.get_avphys_pages
+0x00435120    1 17           sym.__getclktck
+0x00435140    5 71           sym.__init_misc
+0x00435190    2 23           sym.mremap
+0x004351b0    2 20           sym.sysinfo
+0x004351d0    3 64           sym.__libc_alloca_cutoff
+0x00435210    4 39           sym.__lll_lock_wait_private
+0x00435240    1 28           sym.__lll_unlock_wake_private
+0x00435260    6 86           sym.__libc_enable_asynccancel
+0x004352c0    7 89           sym.__libc_disable_asynccancel
+0x00435320    8 134  -> 126  sym.backtrace_helper
+0x004353b0    8 126  -> 118  sym.backtrace
+0x00435430   19 721  -> 697  sym.__backtrace_symbols_fd
+0x00435710    2 48   -> 87   sym.__chk_fail
+0x00435720    1 16           sym.__stack_chk_fail_local
+0x00435730    2 16   -> 55   sym.__fortify_fail
+0x00435770    1 2            sym._dl_debug_state
+0x00435780    9 108  -> 96   sym._dl_debug_initialize
+0x004357f0    4 225          sym._dl_aux_init
+0x00435905   25 223          fcn.00435905
+0x00435b30  111 2169 -> 2123 sym._dl_non_dynamic_init
+0x004363b0   63 746  -> 730  sym._dl_addr
+0x004366a0    5 69   -> 62   sym.__libc_init_secure
+0x004366f0   15 261  -> 251  sym._dl_discover_osversion
+0x00436800    6 129  -> 122  sym.__libc_init_first
+0x00436890    1 9            sym._dl_start
+0x004368b0   42 1173 -> 1128 sym.__gconv_open
+0x00436d50   27 521  -> 492  sym.__gconv
+0x00436f60    6 4304 -> 93   sym.__gconv_close
+0x00436fd0    2 11           sym.__gconv_alias_compare
+0x00436fe0    4 55   -> 53   sym.derivation_compare
+0x00437020    1 8            sym.__gconv_get_modules_db
+0x00437030    1 8            sym.__gconv_get_alias_db
+0x00437040    8 112          sym.__gconv_release_step
+0x004370b0  132 2895 -> 2841 sym.find_derivation
+0x00437c00   16 274  -> 259  sym.__gconv_compare_alias
+0x00437d20   52 778  -> 760  sym.__gconv_find_transform
+0x00438030   14 212          sym.__gconv_close_transform
+0x00438110  222 218  -> 3296 sym.insert_module
+0x004381f0    8 92   -> 79   sym.detect_conflict
+0x00438250   44 878  -> 846  sym.add_module.isra.0
+0x004385c0  210 131  -> 3206 sym.add_alias2.isra.1.part.2
+0x00438650   41 924  -> 910  sym.__gconv_get_path
+0x004389f0   61 1068 -> 1056 sym.__gconv_read_conf
+0x00438e20    1 19   -> 190  sym.__gconv_get_builtin_trans
+0x00438e46    5 160  -> 171  loc.00438e46
+0x00438ef0    1 16           sym.__gconv_btwoc_ascii
+0x00438f00   55 938  -> 921  sym.__gconv_transform_internal_ucs4
+0x004392b0   68 1168 -> 1148 sym.__gconv_transform_ucs4_internal
+0x00439740   53 1009 -> 975  sym.__gconv_transform_internal_ucs4le
+0x00439b40   69 1207 -> 1166 sym.__gconv_transform_ucs4le_internal
+0x0043a000   44 771  -> 744  sym.__gconv_transform_ascii_internal
+0x0043a310  107 2006 -> 1949 sym.__gconv_transform_internal_ascii
+0x0043aaf0  162 2966 -> 2924 sym.__gconv_transform_internal_utf8
+0x0043b690  224 3469 -> 3390 sym.__gconv_transform_utf8_internal
+0x0043c420   83 1430 -> 1362 sym.__gconv_transform_ucs2_internal
+0x0043c9c0  120 2110 -> 2063 sym.__gconv_transform_internal_ucs2
+0x0043d200   82 1386 -> 1332 sym.__gconv_transform_ucs2reverse_internal
+0x0043d770  120 2125 -> 2088 sym.__gconv_transform_internal_ucs2reverse
+0x0043dfc0   57 1216 -> 1190 sym.__gconv_transliterate
+0x0043e480    7 220  -> 212  sym.find_module_idx
+0x0043e560    8 276  -> 271  sym.find_module
+0x0043e680    1 8            sym.__gconv_get_cache
+0x0043e690   30 580  -> 541  sym.__gconv_load_cache
+0x0043e8e0    9 156  -> 143  sym.__gconv_compare_alias_cache
+0x0043e980   50 1200 -> 1186 sym.__gconv_lookup_cache
+0x0043ee30    3 18   -> 17   sym.__gconv_release_cache
+0x0043ee50    2 11           sym.known_compare
+0x0043ee60   13 118  -> 108  sym.do_release_shlib
+0x0043eee0   20 476  -> 464  sym.__gconv_find_shlib
+0x0043f0c0    5 24   -> 43   sym.__gconv_release_shlib
+0x0043f0e0   62 510  -> 1183 sym.new_composite_name
+0x0043f2e0  119 1646 -> 1594 sym.setlocale
+0x0043f950   16 227  -> 215  sym.strip
+0x0043fa40   84 1564 -> 1470 sym._nl_find_locale
+0x00440060    8 74   -> 67   sym._nl_remove_locale
+0x004400b0   25 551  -> 370  sym._nl_intern_locale_data
+0x004402e0   35 872  -> 847  sym._nl_load_locale
+0x00440650    9 94   -> 81   sym._nl_unload_locale
+0x004406b0   60 1366 -> 1335 sym._nl_load_locale_from_archive
+0x00440c10    3 114  -> 113  sym._nl_postload_ctype
+0x00440c90    1 23           sym.__current_locale_name
+0x00440cb0    1 17           sym.__ctype_b_loc
+0x00440cd0    1 17           sym.__ctype_toupper_loc
+0x00440cf0    1 17           sym.__ctype_tolower_loc
+0x00440d10    1 80           sym.__ctype_init
+0x00440d60    3 75           sym.__setfpucw
+0x00440db0    1 87           sym.__sigsetjmp
+0x00440e10    3 36           sym.__sigjmp_save
+0x00440e50   16 655  -> 637  sym.__restore_rt
+0x004410e0   19 36   -> 654  sym.sigaction
+0x00441110    3 50   -> 44   sym.__sigprocmask
+0x00441150   66 1165 -> 1145 sym._quicksort
+0x004415e0   52 923  -> 904  sym.__add_to_environ
+0x00441980    5 88   -> 82   sym.setenv
+0x004419e0   23 318  -> 310  sym.unsetenv
+0x00441b20   14 176          sym.clearenv
+0x00441bd0    3 19   -> 18   sym.secure_getenv
+0x00441bf0    1 16           sym.__strtol_internal
+0x00441c00    1 18           sym.strtoll
+0x00441c20   87 1270 -> 1220 sym.____strtol_l_internal
+0x00442120    1 10           sym.strtoll_l
+0x00442130   13 203  -> 186  sym._itoa_word
+0x00442200    8 116          sym._fitoa_word
+0x00442280    8 98   -> 82   sym.read_int
+0x004422f0   21 340  -> 320  sym.group_number
+0x00442450   33 688  -> 677  sym._i18n_number_rewrite
+0x00442700   15 215  -> 310  sym._IO_helper_overflow
+0x004427e0  210 9570 -> 3985 sym.printf_positional
+0x00444d50   50 9322 -> 1221 sym._IO_vfprintf_internal
+0x00447a70   33 588  -> 564  sym.buffered_vfprintf
+0x00447cc0   18 328  -> 308  sym.hack_digit
+0x00447e10   33 688  -> 677  sym._i18n_number_rewrite_1
+0x004480c0    7 70   -> 59   sym.__guess_grouping.part.0
+0x0044a8c0  498 25   -> 9897 sym.___printf_fp
+0x0044a8e0    3 19   -> 18   sym.__guess_grouping
+0x0044a900   18 270  -> 264  sym.__register_printf_specifier
+0x0044aa10    1 5            sym.__register_printf_function
+0x0044aa20  350 6365 -> 6155 sym.__printf_fphex
+0x0044c300   25 423  -> 408  sym.__register_printf_modifier
+0x0044c4b0   19 215  -> 209  sym.__handle_registered_modifier_mb
+0x0044c590   19 197  -> 192  sym.__handle_registered_modifier_wc
+0x0044c660   17 229  -> 226  sym.__register_printf_type
+0x0044c750    5 177          sym.fprintf
+0x0044c810   15 169  -> 150  sym.read_int_1
+0x0044c8c0   19 276  -> 260  sym.group_number_1
+0x0044c9e0   19 389  -> 375  sym._i18n_number_rewrite_2
+0x0044cb70   11 59824 -> 253  sym._IO_helper_overflow_1
+0x0044cc80  229 10046 -> 4513 sym.printf_positional_1
+0x0044f3c0   48 9500 -> 1204 sym._IO_vfwprintf
+0x00451ea0   30 619  -> 599  sym.buffered_vfprintf_1
+0x00452110    8 98   -> 82   sym.read_int_2
+0x00452180    6 97   -> 90   sym.char_buffer_add_slow
+0x004521f0  141 26304 -> 2552 sym._IO_vfscanf_internal
+0x00459500    1 7            sym.vfscanf
+0x00459510    7 65           sym._IO_funlockfile
+0x00459560    8 98   -> 82   sym.read_int_3
+0x004595d0   69 1519 -> 1017 sym.__parse_one_specmb
+0x00459bc0   15 169  -> 150  sym.read_int_4
+0x00459c70   72 1529 -> 1019 sym.__parse_one_specwc
+0x0045a270   16 333  -> 313  sym._IO_file_doallocate
+0x0045a3c0   24 314  -> 313  sym._IO_fputs
+0x0045a550    5 115  -> 110  sym._IO_wfile_doallocate
+0x0045a5d0   33 447  -> 430  sym._IO_fwrite
+0x0045a7f0   46 730  -> 700  sym.__getdelim
+0x0045acd0   27 8    -> 405  sym._IO_getline
+0x0045ace0   19 276  -> 275  sym._IO_padn
+0x0045ae00   19 276  -> 274  sym._IO_wpadn
+0x0045af20   23 551  -> 538  sym.save_for_wbackup.isra.0
+0x0045b150    4 53           sym._IO_least_wmarker
+0x0045b190    1 49           sym._IO_switch_to_main_wget_area
+0x0045b1d0    1 49           sym._IO_switch_to_wbackup_area
+0x0045b210    4 109  -> 106  sym._IO_wsetb
+0x0045b280   18 445  -> 421  sym._IO_wdefault_pbackfail
+0x0045b440   12 126  -> 131  sym._IO_wdefault_finish
+0x0045b4c0    5 95   -> 92   sym._IO_wdefault_uflow
+0x0045b520    5 109  -> 102  sym.__woverflow
+0x0045b590   20 267  -> 250  sym._IO_wdefault_xsputn
+0x0045b6a0   11 80   -> 179  sym._IO_wdoallocbuf
+0x0045b6f0    3 54           sym._IO_wdefault_doallocate
+0x0045b730    9 121  -> 109  sym._IO_switch_to_wget_mode
+0x0045b7b0    4 109          sym._IO_free_wbackup_area
+0x0045b820   21 327  -> 314  sym.__wuflow
+0x0045b970   20 342  -> 315  sym.__wunderflow
+0x0045bad0   17 263  -> 234  sym._IO_wdefault_xsgetn
+0x0045bbe0    9 119  -> 110  sym._IO_sputbackwc
+0x0045bc60    8 119  -> 103  sym._IO_sungetwc
+0x0045bce0    7 68   -> 55   sym._IO_adjust_wcolumn
+0x0045bd30    6 102  -> 97   sym._IO_init_wmarker
+0x0045bda0    5 68   -> 61   sym._IO_wmarker_delta
+0x0045bdf0   10 189  -> 167  sym._IO_seekwmark
+0x0045beb0    5 34   -> 29   sym._IO_unsave_wmarkers
+0x0045bee0    2 21           sym.do_encoding
+0x0045bf00    1 3            sym.do_always_noconv
+0x0045bf10    1 8            sym.do_max_length
+0x0045bf20   13 237  -> 223  sym.do_in
+0x0045c010   13 221  -> 203  sym.do_unshift
+0x0045c0f0   13 253  -> 241  sym.do_out
+0x0045c1f0    5 183          sym.do_length
+0x0045c2b0   14 458  -> 455  sym._IO_fwide
+0x0045c480   10 162  -> 156  sym.__libc_scratch_buffer_grow_preserve
+0x0045c530    7 99           sym.__libc_scratch_buffer_set_array_size
+0x0045c5f0    3 73   -> 64   sym.strndup
+0x0045c640   14 388  -> 382  sym.__strerror_r
+0x0045c7d0   19 536  -> 494  sym.__strnlen
+0x0045c9f0   17 738  -> 695  sym.strrchr
+0x0045cce0   26 232          sym.strtok_r
+0x0045cdd0   21 302  -> 285  sym.critical_factorization_1
+0x0045cf00   50 776  -> 737  sym.two_way_long_needle_1
+0x0045d210   49 719  -> 688  sym.memmem
+0x0045d4e0   16 203  -> 191  sym.__argz_create_sep
+0x0045d5b0   13 166  -> 162  sym.argz_add_sep
+0x0045d660   42 664  -> 564  sym.wcslen
+0x0045d900    1 9            sym.wmemcpy
+0x0045d910    2 9            sym.__wmemmove
+0x0045d920    9 90           sym.wmemset
+0x0045d980   21 426  -> 413  sym.__btowc
+0x0045db30    1 32   -> 28   sym.mbrlen
+0x0045db50   28 526  -> 500  sym.mbrtowc
+0x0045dd60   20 464  -> 446  sym.c32rtomb
+0x0045df30    1 28           sym.mbsrtowcs
+0x0045df50   29 683  -> 663  sym.wcsrtombs
+0x0045e200   20 153  -> 142  sym.wcsnlen
+0x0045e2a0    5 32   -> 27   sym.__wcschrnul
+0x0045e2c0   39 837  -> 832  sym.__mbsrtowcs_l
+0x0045e610    1 8            sym.time
+0x0045e620    1 42           sym.compute_offset
+0x0045e650   28 742  -> 721  sym.compute_change
+0x0045e940    5 126          sym.update_vars
+0x0045e9c0   12 241  -> 234  sym.__tzstring_len
+0x0045eac0   16 194  -> 189  sym.parse_tzname
+0x0045eb90   17 375  -> 351  sym.parse_offset
+0x0045ed10   32 806  -> 771  sym.parse_rule
+0x0045f040    1 21           sym.__tzstring
+0x0045f060   14 312  -> 298  sym.__tzset_parse_tz
+0x0045f1a0   46 654  -> 924  sym.tzset_internal
+0x0045f430   11 142          sym.__tzname_max
+0x0045f4c0    5 133          sym.__tz_compute
+0x0045f560   13 179          sym.__tzset
+0x0045f7f0  176 3686 -> 3657 sym.__tzfile_read
+0x00460660   23 537  -> 535  sym.__tzfile_default
+0x00460880   94 1705 -> 1662 sym.__tzfile_compute
+0x00460f30   12 247  -> 242  sym.__alloc_dir
+0x00461030   10 161  -> 150  sym.opendir_tail
+0x004610e0    6 83   -> 71   sym.__opendirat
+0x00461140    6 75   -> 68   sym.__opendir
+0x00461190    3 33           sym.__closedir
+0x004611f0   20 256  -> 240  sym.readdir
+0x004612f0   11 147          sym.rewinddir
+0x00461390    6 141  -> 138  sym.__getdents
+0x00461420   11 191  -> 176  sym.fdopendir
+0x004614e0    3 20   -> 36   sym.uname
+0x00461500    1 8            sym.getuid
+0x00461510    1 8            sym.geteuid
+0x00461520    1 8            sym.getgid
+0x00461530    1 8            sym.getegid
+0x00461540    4 50   -> 49   sym._lxstat
+0x00461590    3 37           sym.__fxstatat
+0x004615f0    1 28           sym.__access_noerrno
+0x00461610    2 20           sym.access
+0x00461640    6 81   -> 97   sym.__libc_close
+0x004616a0    3 62           sym.isatty
+0x004616e0    7 200  -> 193  sym.__tcgetattr
+0x004617b0    3 36           sym.__brk
+0x00461810    6 81   -> 97   sym.writev
+0x00461870    5 115  -> 110  sym.__wctrans
+0x00461900    6 63           sym.towctrans
+0x00461940   28 472  -> 455  sym.__readonly_area
+0x00461b20   29 210  -> 197  sym.is_dst
+0x00461c00   32 321  -> 289  sym.is_trusted_path_normalize
+0x00461d50   11 228  -> 212  sym.add_name_to_object.isra.4
+0x00461e40    8 128          sym.lose.isra.5
+0x00461ec0   68 1282 -> 1229 sym.open_verify.constprop.7
+0x004623d0   66 1505 -> 1470 sym.open_path
+0x004629c0  181 4004 -> 3920 sym._dl_map_object_from_fd.constprop.8
+0x00463970   10 201  -> 196  sym.add_path.isra.3.constprop.9
+0x00463a40    8 157          sym._dl_dst_count
+0x00463ae0   37 639  -> 616  sym._dl_dst_substitute
+0x00463d60   53 318  -> 918  sym.expand_dynamic_string_token
+0x00463ea0   47 720  -> 698  sym.fillin_rpath
+0x00464170   30 434  -> 444  sym.cache_rpath.part.6
+0x00464340   17 501  -> 500  sym._dl_init_paths
+0x00464540  123 2493 -> 2442 sym._dl_map_object
+0x00464f00   24 398  -> 380  sym.check_match
+0x00465090  128 2901 -> 2808 sym.do_lookup_x
+0x00465bf0  170 3058 -> 3011 sym._dl_lookup_symbol_x
+0x004667f0    7 169  -> 168  sym._dl_setup_hash
+0x004668a0   12 185  -> 156  sym._dl_add_to_namespace_list
+0x00466960   38 757  -> 717  sym._dl_new_object
+0x00466c60    6 148          sym._dl_try_allocate_static_tls
+0x00466d20    4 48           sym._dl_allocate_static_tls
+0x00466d50    2 63           sym._dl_nothread_init_static_tls
+0x00466d90    6 306          sym._dl_protect_relro
+0x00466df0    3 210          sym._dl_reloc_bad_type
+0x00466ed0  251 6160 -> 4715 sym._dl_relocate_object
+0x004686e0   82 2061 -> 2023 sym._dl_important_hwcaps
+0x00468ef0   87 1419 -> 1409 sym._dl_debug_vdprintf
+0x00469480    7 138  -> 134  sym._dl_sysdep_read_whole_file
+0x00469510    3 162          sym._dl_debug_printf
+0x004695c0    3 162          sym._dl_debug_printf_c
+0x00469670    3 148          sym._dl_dprintf
+0x00469710    8 107  -> 90   sym._dl_name_match_p
+0x00469780   11 118  -> 114  sym._dl_higher_prime_number
+0x00469800    4 68   -> 64   sym.allocate_dtv
+0x00469850   10 161  -> 154  sym._dl_next_tls_modid
+0x00469940   10 82           sym._dl_count_modids
+0x004699a0    1 21           sym._dl_get_tls_static_info
+0x004699c0    5 180  -> 168  sym._dl_allocate_tls_storage
+0x00469a80   35 801  -> 786  sym._dl_allocate_tls_init
+0x00469db0    8 119  -> 116  sym._dl_deallocate_tls
+0x00469e30    9 128  -> 119  sym._dl_tls_get_addr_soft
+0x00469eb0   32 607  -> 555  sym._dl_add_to_slotinfo
+0x00469f90   23 383  -> 350  sym._dl_get_origin
+0x0046a110    3 35           sym._dl_scope_free
+0x0046a1d0    5 92   -> 82   sym._dl_make_stack_executable
+0x0046a230   21 528  -> 506  sym.add_to_global
+0x0046a440   12 138  -> 129  sym._dl_find_dso_for_object
+0x0046a4d0   30 686  -> 670  sym._dl_open
+0x0046a780   13 290          sym._dl_show_scope
+0x0046a8b0   95 2106 -> 2069 sym.dl_open_worker
+0x0046b0f0   18 310  -> 284  sym.remove_slotinfo
+0x0046b230  212 3565 -> 3505 sym._dl_close_worker
+0x0046c240   27 1015         sym._dl_runtime_profile_avx512
+0x0046c6c0    2 53   -> 377  sym._dl_runtime_resolve_avx_slow
+0x0046c700    2 380          sym._dl_runtime_resolve_avx_opt
+0x0046c880   27 1024         sym._dl_runtime_profile_avx
+0x0046cd00    1 308          sym._dl_runtime_resolve_sse
+0x0046ce40    3 447          sym._dl_runtime_profile_sse
+0x0046d040    1 324          sym._dl_runtime_resolve_sse_vex
+0x0046d190   17 209  -> 206  sym._dl_cache_libcmp
+0x0046d270   86 1481 -> 1412 sym._dl_load_cache_lookup
+0x0046d840    2 18           sym._dl_unload_cache
+0x0046d880   17 416  -> 390  sym._dl_tlsdesc_resolve_rela_fixup
+0x0046da20    9 93   -> 82   sym._dl_tlsdesc_resolve_hold_fixup
+0x0046da80    1 25           sym._dl_unmap
+0x0046daa0    1 5            sym._dl_tlsdesc_return
+0x0046dab0    1 14           sym._dl_tlsdesc_undefweak
+0x0046dac0    1 111          sym._dl_tlsdesc_resolve_rela
+0x0046db30    1 113          sym._dl_tlsdesc_resolve_hold
+0x0046dbb0    7 83   -> 78   sym._dl_addr_inside_object
+0x0046dc10    1 91312 -> 12   sym._dl_mcount_wrapper
+0x0046dc20    3 91296 -> 24   sym._dl_mcount_wrapper_check
+0x0046dc50    1 58           sym.do_dlopen
+0x0046dc90    8 136  -> 128  sym.dlerror_run
+0x0046dd20    9 113  -> 102  sym.__libc_dlsym
+0x0046dda0    9 13   -> 141  sym.__libc_dlclose
+0x0046ddb0    3 133          sym.do_dlsym_private
+0x0046de40    1 53           sym.do_dlsym
+0x0046de80   17 5    -> 1197 sym.do_dlclose
+0x0046de90    9 113  -> 102  sym.__libc_dlsym_private
+0x0046df10    7 128          sym.__libc_dlopen_mode
+0x0046df90    3 31           sym.__libc_register_dl_open_hook
+0x0046dfb0    9 380          sym._dl_signal_error
+0x0046e130    6 242  -> 235  sym._dl_catch_error
+0x0046e230    1 80           sym.__longjmp
+0x0046e280    1 16           sym.__strtof_internal
+0x0046e290    1 18           sym.strtof
+0x0046e2b0  471 20432 -> 8014 sym.__strtod_internal
+0x0046e2c0  471 20416 -> 8016 sym.strtod
+0x0046e2e0  465 30125 -> 7657 sym.__strtold_internal
+0x0046e2f0  465 30109 -> 7659 sym.strtold
+0x0046e310    5 33           sym.round_away
+0x0046e390   48 1120 -> 1049 sym.round_and_return
+0x0046e7f0   44 703  -> 668  sym.str_to_mpn.isra.0
+0x0046eab0  471 8254 -> 8068 sym.____strtof_l_internal
+0x00470af0    1 10           sym.strtof_l
+0x00470b00    5 33           sym.round_away_1
+0x00470b80   48 1137 -> 1071 sym.round_and_return_1
+0x00471000   44 703  -> 668  sym.str_to_mpn.isra.0_1
+0x00473280  471 10   -> 8008 sym.__strtod_l
+0x00473290    5 33           sym.round_away_2
+0x00473310   49 1092 -> 1043 sym.round_and_return_2
+0x00473760   44 711  -> 676  sym.str_to_mpn.isra.0_2
+0x00475890  465 10   -> 7651 sym.__strtold_l
+0x004758a0   14 161  -> 159  sym.__strtof_nan
+0x00475950   15 214  -> 212  sym.__strtod_nan
+0x00475a30   15 194  -> 192  sym.__strtold_nan
+0x00475b00   14 173  -> 169  sym.__mpn_add_n
+0x00475bb0    6 67   -> 49   sym.__mpn_cmp
+0x00475c00   57 1020 -> 1000 sym.__mpn_divrem
+0x00476000   17 259  -> 257  sym.__mpn_lshift
+0x00476110   17 259  -> 251  sym.__mpn_rshift
+0x00476220   47 936  -> 915  sym.__mpn_mul
+0x004765d0   16 281  -> 274  sym.__mpn_mul_1
+0x004766f0   19 264  -> 237  sym.__mpn_impn_mul_n_basecase
+0x00476800   22 594  -> 588  sym.__mpn_impn_mul_n
+0x00476a6f   10 442  -> 131  fcn.00476a6f
+0x00476ac2    6 67   -> 73   fcn.00476ac2
+0x00476c30   19 248  -> 223  sym.__mpn_impn_sqr_n_basecase
+0x00476d30    5 149          sym.__mpn_impn_sqr_n
+0x00476e0c   30 651  -> 607  fcn.00476e0c
+0x004770a0   10 147  -> 143  sym.__mpn_mul_n
+0x00477140   14 173  -> 169  sym.__mpn_sub_n
+0x004771f0   11 235  -> 227  sym.__mpn_submul_1
+0x004772e0    3 83           sym.__mpn_extract_double
+0x00477370   11 202  -> 194  sym.__mpn_extract_long_double
+0x00477440    1 36           sym.__mpn_construct_float
+0x00477470    1 58           sym.__mpn_construct_double
+0x004774b0    1 67           sym.__mpn_construct_long_double
+0x00477500    5 177          sym.__sscanf
+0x004775c0    3 153          sym.vsscanf
+0x00477660    3 17           sym.fileno_unlocked
+0x00477690   17 207          sym.fseek
+0x004777c0   29 324  -> 312  sym.ftello64
+0x00477960    5 85   -> 70   sym.__fread_unlocked
+0x004779c0    4 49           sym.init
+0x00477a10   28 514  -> 496  sym.__dlerror
+0x00477c20  209 40   -> 3117 sym.check_free.isra.0
+0x00477c50    4 50   -> 47   sym.free_key_mem
+0x00477c90   23 373  -> 360  sym._dlerror_run
+0x00477e10    3 31           sym.__libc_register_dlfcn_hook
+0x00477e30   64 9    -> 739  sym.__dladdr
+0x00477e40   68 34   -> 760  sym.__dladdr1
+0x00477e70    2 28           sym.dlinfo_doit
+0x00477ea0    1 9            loc.00477ea0
+0x00477f40    3 87           sym.__dlinfo
+0x00477fa0    7 223          sym.dlmopen_doit
+0x00478080   22 133  -> 508  sym.strerror
+0x004781a0   37 34244 -> 876  sym.__strncasecmp_sse2
+0x0047a7f0   39 24436 -> 859  sym.__strncasecmp_sse42
+0x0047a800   39 24420 -> 843  sym.__strncasecmp_l_sse42
+0x0047c7c0   39 16292 -> 745  sym.__strncasecmp_avx
+0x0047e170    4 51           sym.__strsep
+0x0047e1c0   37 9636 -> 876  sym.__strncasecmp_ssse3
+0x00480770   21 982  -> 972  sym.__offtime
+0x00480b50   28 13   -> 453  sym.__localtime_r
+0x00480b60   28 15   -> 455  sym.localtime
+0x00480b70    1 264          sym.ydhms_diff
+0x00480c80   12 215  -> 198  sym.ranged_convert
+0x00480d60    6 161  -> 144  sym.guess_time_tm.isra.0
+0x004812a0   39 28   -> 1176 sym.mktime
+0x004812c0    1 8            sym.__getpid
+0x004812d0    7 125  -> 121  sym._dl_build_local_scope
+0x00481350    1 54           sym.openaux
+0x00481390  194 4595 -> 4534 sym._dl_map_object_deps
+0x00482590   21 448  -> 413  sym._dl_fixup
+0x00482750   27 557  -> 519  sym._dl_profile_fixup
+0x00482980    1 2            sym._dl_call_pltexit
+0x00482990   18 283  -> 272  sym.call_init.part.0
+0x00482ab0   21 292  -> 285  sym._dl_init
+0x00482be0   29 590  -> 576  sym._dl_sort_fini
+0x00482e30   46 693  -> 674  sym._dl_fini
+0x004830f0   39 909  -> 888  sym.match_symbol
+0x00483480   58 1118 -> 1084 sym._dl_check_map_versions
+0x004838e0    7 104  -> 100  sym._dl_check_all_versions
+0x00483950   56 1899 -> 1878 sym._dl_start_profile
+0x004840c0   38 595  -> 599  sym._dl_mcount
+0x00484320   11 235  -> 227  sym.__mpn_addmul_1
+0x00484410   18 295  -> 272  sym._IO_seekoff_unlocked
+0x00484540   17 211          sym._IO_seekoff
+0x00484670    7 234          sym.dlopen_doit
+0x00484760   17 5    -> 1197 sym.dlclose_doit
+0x00484770    1 32           sym.__dlclose
+0x00484790    1 26           sym.dlsym_doit
+0x004847b0    7 131          sym.__dlsym
+0x00484840    1 30           sym.dlvsym_doit
+0x00484860    7 136          sym.__dlvsym
+0x004848f0    3 80           sym.__profil_counter
+0x00484940   15 409  -> 401  sym.__profil
+0x00484ae0    1 7            sym.__profile_frequency
+0x00484af0    1 47           sym.call_dl_lookup
+0x00484df0   12 229          sym._dl_vsym
+0x00484ee0   44 13   -> 930  sym._dl_sym
+0x00484ef0    3 20   -> 36   sym.setitimer
+0x00484f04    3 38           sym.read_uleb128
+0x00484f2a    6 60           sym.read_sleb128
+0x00484f66    4 32           sym._Unwind_GetGRPtr
+0x00484f86   20 266  -> 163  sym.read_encoded_value
+0x00485090   20 1230 -> 328  sym.execute_cfa_program
+0x0048555e   53 1175         sym.uw_frame_state_for
+0x004859f5    1 120          sym.init_dwarf_reg_size_table
+0x00485a6d    5 41           sym._Unwind_SetSpColumn
+0x00485a96    7 58           sym._Unwind_GetGR
+0x00485ad0   16 216          sym.uw_install_context_1
+0x00485ba8  121 1440 -> 1312 sym.execute_stack_op
+0x00486148   17 493  -> 330  sym.uw_update_context_1
+0x00486335    7 220          sym.uw_init_context_1
+0x00486411    4 67           sym.uw_update_context
+0x00486454   12 167          sym._Unwind_RaiseException_Phase2
+0x004864fb   12 189          sym._Unwind_ForcedUnwind_Phase2
+0x004865b8    1 8            sym._Unwind_GetCFA
+0x004865c0    8 61           sym._Unwind_SetGR
+0x004865fd    1 8            sym._Unwind_GetIP
+0x00486605    1 21           sym._Unwind_GetIPInfo
+0x0048661a    1 8            sym._Unwind_SetIP
+0x00486622    1 8            sym._Unwind_GetLanguageSpecificData
+0x0048662a    1 8            sym._Unwind_GetRegionStart
+0x00486632    3 37           sym._Unwind_FindEnclosingFunction
+0x00486657    1 8            sym._Unwind_GetDataRelBase
+0x0048665f    1 8            sym._Unwind_GetTextRelBase
+0x00486667   10 234          sym.__frame_state_for
+0x00486751    1 1            sym._Unwind_DebugHook
+0x00486752   13 341          sym._Unwind_RaiseException
+0x004868a7    3 208          sym._Unwind_ForcedUnwind
+0x00486977    6 189          sym._Unwind_Resume
+0x00486a34    5 213          sym._Unwind_Resume_or_Rethrow
+0x00486b09    3 20           sym._Unwind_DeleteException
+0x00486b1d    9 141          sym._Unwind_Backtrace
+0x00486baa    3 38           sym.read_uleb128_1
+0x00486bd0    6 60           sym.read_sleb128_1
+0x00486c0c    1 23           sym.fde_unencoded_compare
+0x00486c23    7 156          sym.frame_downheap
+0x00486cbf    7 129          sym.frame_heapsort
+0x00486d40   13 65           sym.size_of_encoded_value
+0x00486d81   13 62           sym.base_from_object
+0x00486dbf   13 62           sym.base_from_cb_data
+0x00486dfd    4 71           sym.read_encoded_value_with_base
+0x00486eb9    1 127          sym.fde_single_encoding_compare
+0x00486f38   20 212          sym.get_cie_encoding
+0x0048700c   17 314          sym.linear_search_fdes
+0x00487146    1 19           sym.get_fde_encoding
+0x00487159   55 957          sym._Unwind_IteratePhdrCallback
+0x00487516    1 131          sym.fde_mixed_encoding_compare
+0x00487599   20 301          sym.classify_object_over_fdes
+0x004876c6   16 265          sym.add_fdes
+0x004877cf   84 1405         sym.search_object
+0x00487dc0   10 9    -> 125  sym.__register_frame_info
+0x00487dc9   13 32   -> 157  sym.__register_frame
+0x00487e60    8 26   -> 145  sym.__register_frame_table
+0x00487e7a   22 197          sym.__deregister_frame_info_bases
+0x00487f3f   23 5    -> 202  sym.__deregister_frame_info
+0x00487f44    3 21           sym.__deregister_frame
+0x00487f59   28 415          sym._Unwind_Find_FDE
+0x004880f8    3 38           sym.read_uleb128_2
+0x0048811e   21 311  -> 171  sym.read_encoded_value_1
+0x00488255   23 444          sym.__gcc_personality_v0
+0x00488420   14 284  -> 271  sym.dl_iterate_phdr
+0x00488540   11 169          sym.free_mem
+0x004885f0    7 73   -> 69   sym._nl_finddomain_subfreeres
+0x00488640   16 215  -> 203  sym._nl_unload_domain
+0x00488720    4 57           sym.buffer_free
+0x00488760   12 201          sym.free_derivation
+0x00488830    8 92   -> 83   sym.free_modules_db
+0x00488890    8 85   -> 84   sym.free_mem_1
+0x004888f0    5 34   -> 28   sym.free_mem_2
+0x00488920    6 50   -> 41   sym.free_mem_3
+0x00488960    4 27           sym.do_release_all
+0x00488980    1 37           sym.free_mem_4
+0x004889b0   14 164  -> 154  sym.free_category
+0x00488a60   45 787  -> 776  sym._nl_locale_subfreeres
+0x00488d80    1 42           sym.free_mem_5
+0x00488db0   10 92           sym.free_mem_6
+0x00488e10    4 64           sym.free_mem_7
+0x00488e50   11 121  -> 117  sym.free_slotinfo
+0x00488ed0   19 295  -> 282  sym.free_mem_8
+0x00489000   16 234          sym.arena_thread_freeres
+0x00489b34    2 30           str.________Backtrace:___________n
+0x00489b52    3 30           str.________Memory_map:__________n
+0x0048c618    1 4            fcn.0048c618
+0x0048c61c    1 4            fcn.0048c61c
+0x0048c620    1 4            fcn.0048c620
+0x0048c624    1 2            fcn.0048c624
+0x004984b2    1 23           fcn.004984b2
+0x0049d272    2 20           fcn.0049d272
+0x0049ddba    1 3            fcn.0049ddba
+0x0049ef1f    3 146          fcn.0049ef1f
+0x0049fab4    1 1            fcn.0049fab4
+0x0049fae4  129 1574 -> 967  fcn.0049fae4
+0x004a0285    1 64           fcn.004a0285
+0x006b2188    1 1021         obj._dl_init_static_tls
+0x006b41e0    1 1020         obj._dl_wait_lookup_done
